@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import dashboardTheme from './Components/DashboardTheme/DashboardTheme';
 import BagPage from './Pages/BagPage/BagPage';
 import PagPage from './Pages/PadPage/PagPage';
+import SparringPage from './Pages/SparringPage/SparringPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path='' element={<HomePage />} />
             <Route path='/bagPage' element={<BagPage />} />
             <Route path='/padPage' element={<PagPage />} />
+            <Route path='/sparringPage' element={<SparringPage />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

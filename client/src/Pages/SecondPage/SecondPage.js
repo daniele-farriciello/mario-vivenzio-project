@@ -115,7 +115,7 @@ export default function SecondPage() {
                             </CardActions>
                         </Card>
                     </Box>
-                    <Box sx={{ height: '50vh', width: '100vw' }}>
+                    <Box sx={{ height: '50vh', width: '100vw' }} onClick={() => navigate('/sparringPage')}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             {/* Overlay for darkening the image */}
                             <div

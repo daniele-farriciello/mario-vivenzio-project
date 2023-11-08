@@ -90,3 +90,34 @@ export function RegoularH1HomePage({children, position= 'absolute', color, fontS
         </Typography>
     );
 }
+
+export function TeamVivenzioTitle({children, color, fontSize=50, marginLeft=null, marginBottom=0, paddingTop=2, paddingRight, textAlign='center', hoverColor=null}) {
+    const [hovered, setHovered] = React.useState(false);
+
+    return (
+        <Typography 
+            variant="h2" 
+            sx={{
+                paddingRight: paddingRight,
+                marginLeft: marginLeft,
+                textAlign: textAlign,
+                fontFamily: 'American Captain',
+                fontSize: fontSize,
+                color: hovered && hoverColor ? hoverColor : color,
+                marginBottom: marginBottom,
+                paddingTop: paddingTop,
+                transition: 'color 0.3s',
+                ...(hoverColor && {
+                    '&:hover': {
+                        cursor: 'pointer',
+                        color: hoverColor,
+                    }
+                })
+            }}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+        >
+            {children}
+        </Typography>
+    );
+}
