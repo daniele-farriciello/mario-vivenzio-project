@@ -6,6 +6,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import dashboardTheme from './Components/DashboardTheme/DashboardTheme';
 import BagPage from './Pages/BagPage/BagPage';
+import PagPage from './Pages/PadPage/PagPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path='' element={<HomePage />} />
             <Route path='/bagPage' element={<BagPage />} />
+            <Route path='/padPage' element={<PagPage />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import Image from '../../img/bagPage-img.jpeg';
+import Image from '../../img/padPage.jpeg';
 import { Typography } from '@mui/material';
 import { RegoularH1, RegoularH2 } from '../../Components/Typography/Typography';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 
-export default function BagPage() {
+export default function PagPage() {
   return (
     <Box sx={{ flexGrow: 1, height: '100vh' }}>
       <Grid container spacing={2} columns={16} sx={{ height: '100%' }}>
@@ -21,7 +21,7 @@ export default function BagPage() {
           }}>
         </Grid>
 
-        <Grid xs={8} sx={{ bgcolor: 'background.paper', p: 3, height: '100%', overflow: 'auto', width: '40%', pt: 15 }} ml={7}>
+        <Grid xs={8} sx={{ bgcolor: 'background.paper', p: 3, height: '100%', overflow: 'auto', width: '40%', pt: 15}} ml={7}>
           <RegoularH1 color={dashboardTheme.palette.secondary.main}>About</RegoularH1>
           <Typography variant="body1">
             Welcome, your gateway to the world of Muay Thai! We're thrilled that you've landed on our platform.
