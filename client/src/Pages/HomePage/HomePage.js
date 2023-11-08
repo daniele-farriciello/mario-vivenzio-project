@@ -7,6 +7,7 @@ import membershipPic from '../../img/homePage1.jpg';
 import membershipPic2 from '../../img/homePage2.jpg';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 import SecondPage from '../SecondPage/SecondPage';
+import ThirdPage from '../ThirdSection/ThirdPage';
 // import { RegoularH1HomePage } from '../../Components/Typography/Typography';
 
 export default function HomePage() {
@@ -157,6 +158,7 @@ export default function HomePage() {
                 </Box>
             </Paper>
             <SecondPage/>
+            <ThirdPage/>
         </div>
     );
 }

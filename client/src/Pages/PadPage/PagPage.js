@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import Image from '../../img/padPage.jpeg';
+import Image from '../../img/ring-gruppo.png';
 import { Typography } from '@mui/material';
 import { RegoularH1, RegoularH2 } from '../../Components/Typography/Typography';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
