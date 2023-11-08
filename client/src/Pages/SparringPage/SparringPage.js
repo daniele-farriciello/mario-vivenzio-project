@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import Image from '../../img/sparring-page.png';
+import Image from '../../img/sparringPage.png';
 import { Typography } from '@mui/material';
 import { RegoularH1, RegoularH2 } from '../../Components/Typography/Typography';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 
 export default function SparringPage() {
   return (
-    <Box sx={{ flexGrow: 1, height: '100vh' }}>
+    <Box sx={{ height: '100vh' }}>
       <Grid container spacing={2} columns={16} sx={{ height: '100%' }}>
         <Grid
           xs={8}

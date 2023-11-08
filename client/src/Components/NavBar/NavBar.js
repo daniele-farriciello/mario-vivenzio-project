@@ -5,56 +5,39 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import styled from 'styled-components';
-import { Link } from '@mui/material';
+import { Avatar, Link, alpha } from '@mui/material';
 import { RegoularH2, TeamVivenzioTitle } from '../Typography/Typography';
+import dashboardTheme from '../DashboardTheme/DashboardTheme';
+import logo from '../../img/logo.jpg'
 
 
 export default function NavBar() {
 
-    const NewInstagramIcon = styled(InstagramIcon)`
-        font-size: 300%;
-        margin-bottom: -10px;
-        transition: color 0.5s;
-
-        &:hover {
-            color: #C13584;
-        }`
-
-    const NewFacebookIcon = styled(FacebookIcon)`
-        font-size: 300%;
-        margin-bottom: -10px;
-        transition: color 0.5s;
-
-        &:hover {
-            color: #3876BF;
-        }`
-
-
     return (
         <Box >
             <CssBaseline />
-            <AppBar component="nav">
+            <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85) }} component="nav">
 
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
                     <Box display={'flex'} flexDirection={'row'}>
-                        <RegoularH2 paddingRight={3}>Chi siamo</RegoularH2>
-                        <RegoularH2 paddingRight={3}>Attivita</RegoularH2>
-                        <RegoularH2 paddingRight={3}>Contatti</RegoularH2>
+                        <RegoularH2 marginRight={3} hoverColor={alpha(dashboardTheme.palette.customColors.blue, 0.85)} borderBottom={`2px solid ${alpha(dashboardTheme.palette.customColors.blue, 0.85)}`}>Chi siamo</RegoularH2>
+                        <RegoularH2 marginRight={3} hoverColor={alpha(dashboardTheme.palette.customColors.white, 1.0)} borderBottom={`2px solid ${alpha(dashboardTheme.palette.customColors.white, 1.0)}`}>Sponsor</RegoularH2>
+                        <RegoularH2 marginRight={3} hoverColor={alpha(dashboardTheme.palette.customColors.red, 0.85)} borderBottom={`2px solid ${alpha(dashboardTheme.palette.customColors.red, 0.85)}`}>Contatti</RegoularH2>
                     </Box>
-                    <Box>
-                    <TeamVivenzioTitle marginLeft={-30}>TEAM VIVENZIO</TeamVivenzioTitle>
+                    <Box sx={{ display: 'flex', alignItems: 'center', ml: -43 }}>
+                        <Avatar sx={{ width: 56, height: 56 , mr: 2}} alt="logo" src={logo} />
+                        <TeamVivenzioTitle>TEAM VIVENZIO</TeamVivenzioTitle>
                     </Box>
-                    
+
                     <Box display={'flex'} justifyContent={'flex-end'}>
                         <Box sx={{ marginRight: '20px' }}>
                             <Link underline="none" color="inherit" href="https://www.instagram.com/mario__vivenzio/" target="_blank" rel="noopener noreferrer">
-                                <NewInstagramIcon />
+                                <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
                             </Link>
                         </Box>
                         <Box sx={{ display: { xs: 'none', sm: 'block', marginRight: '10px' } }}>
                             <Link underline="none" color="inherit" href="https://www.facebook.com/mario.vivenzio.58/" target="_blank" rel="noopener noreferrer">
-                                <NewFacebookIcon />
+                                <FacebookIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
                             </Link>
                         </Box>
                     </Box>
