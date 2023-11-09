@@ -8,6 +8,7 @@ import membershipPic from '../../img/pasquale-ring.png';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 import SecondPage from '../SecondPage/SecondPage';
 import ThirdPage from '../ThirdSection/ThirdPage';
+import SponsorPage from '../SponsorPage/SponsorPage';
 // import { RegoularH1HomePage } from '../../Components/Typography/Typography';
 
 export default function HomePage() {
@@ -159,6 +160,7 @@ export default function HomePage() {
             </Paper>
             <SecondPage/>
             <ThirdPage/>
+            <SponsorPage/>
         </div>
     );
 }

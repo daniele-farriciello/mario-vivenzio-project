@@ -21,7 +21,7 @@ export default function NavBar() {
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
                     <Box display={'flex'} flexDirection={'row'}>
                         <RegoularH2 marginRight={3} hoverColor={alpha(dashboardTheme.palette.customColors.blue, 0.85)} borderBottom={`2px solid ${alpha(dashboardTheme.palette.customColors.blue, 0.85)}`}>Chi siamo</RegoularH2>
-                        <RegoularH2 marginRight={3} hoverColor={alpha(dashboardTheme.palette.customColors.white, 1.0)} borderBottom={`2px solid ${alpha(dashboardTheme.palette.customColors.white, 1.0)}`}>Sponsor</RegoularH2>
+                        <RegoularH2 marginRight={3} hoverColor={alpha(dashboardTheme.palette.customColors.white, 1.0)} borderBottom={`2px solid ${alpha(dashboardTheme.palette.customColors.white, 1.0)}`}>Sponsors</RegoularH2>
                         <RegoularH2 marginRight={3} hoverColor={alpha(dashboardTheme.palette.customColors.red, 0.85)} borderBottom={`2px solid ${alpha(dashboardTheme.palette.customColors.red, 0.85)}`}>Contatti</RegoularH2>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', ml: -43 }}>

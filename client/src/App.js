@@ -8,6 +8,7 @@ import dashboardTheme from './Components/DashboardTheme/DashboardTheme';
 import BagPage from './Pages/BagPage/BagPage';
 import PagPage from './Pages/PadPage/PagPage';
 import SparringPage from './Pages/SparringPage/SparringPage';
+import SponsorPage from './Pages/SponsorPage/SponsorPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='/bagPage' element={<BagPage />} />
             <Route path='/padPage' element={<PagPage />} />
             <Route path='/sparringPage' element={<SparringPage />} />
+            <Route path='/sponsorPage' element={<SponsorPage />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
