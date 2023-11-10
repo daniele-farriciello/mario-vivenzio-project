@@ -25,7 +25,7 @@ export default function SponsorPage() {
                 <RegoularH1 marginLeft={37} textAlign='start'>PARTENRSHIP</RegoularH1>
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%', justifyContent: 'space-around' }} >
                     <Box sx={{ height: '60vh', width: '50vw', pb: 6 }}>
-                        <Card sx={{ width: '100%', height: '100%', position: 'relative', borderRadius: 10 }}>
+                        <Card elevation={10} sx={{ width: '100%', height: '100%', position: 'relative', borderRadius: 10 }}>
                             <div
                                 style={{
                                     position: 'absolute',
