@@ -22,7 +22,7 @@ export default function SponsorPage() {
     return (
         <section>
             <Paper sx={{ borderColor: dashboardTheme.palette.customColors.red, width: '100%' }}>
-                <RegoularH1>SPONSORS</RegoularH1>
+                <RegoularH1 marginLeft={37} textAlign='start'>PARTENRSHIP</RegoularH1>
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%', justifyContent: 'space-around' }} >
                     <Box sx={{ height: '60vh', width: '50vw', pb: 6 }}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative', borderRadius: 10 }}>
