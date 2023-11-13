@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import { Box, Paper, alpha } from "@mui/material";
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme'
@@ -9,14 +9,23 @@ import { Link } from 'react-router-dom';
 import { SponsorData } from './SponsorData';
 
 export default function SponsorPage() {
-    const [currentSponsorIndex, setCurrentSponsorIndex] = React.useState(0);
+    const [currentSponsorIndex, setCurrentSponsorIndex] = useState(0);
+    const [fadeOut, setFadeOut] = useState(false);
 
     const handleNextSponsor = () => {
-        setCurrentSponsorIndex((prevIndex) => (prevIndex + 1) % SponsorData.length);
+        setFadeOut(true);
+        setTimeout(() => {
+            setCurrentSponsorIndex((prevIndex) => (prevIndex + 1) % SponsorData.length);
+            setFadeOut(false);
+        }, 500); // Duration of the fade out
     };
 
     const handlePreviousSponsor = () => {
-        setCurrentSponsorIndex((prevIndex) => (prevIndex - 1 + SponsorData.length) % SponsorData.length);
+        setFadeOut(true);
+        setTimeout(() => {
+            setCurrentSponsorIndex((prevIndex) => (prevIndex - 1 + SponsorData.length) % SponsorData.length);
+            setFadeOut(false);
+        }, 500); // Duration of the fade out
     };
 
     return (
@@ -39,7 +48,7 @@ export default function SponsorPage() {
                             <Link to={SponsorData[currentSponsorIndex].link} target="_blank">
                                 <img
                                     src={SponsorData[currentSponsorIndex].img}
-                                    alt="membership pic"
+                                    alt="Sponsor"
                                     style={{
                                         position: 'absolute',
                                         top: 0,
@@ -49,12 +58,8 @@ export default function SponsorPage() {
                                         objectFit: 'contain',
                                         width: '100%',
                                         height: '100%',
-                                        transform: 'scale(1.0)',
-                                        transition: 'transform 0.5s, opacity 0.5s',
-                                        ":hover": {
-                                            opacity: '1',
-                                            transform: 'scale(1.15)'
-                                        }
+                                        opacity: fadeOut ? 0 : 1,
+                                        transition: 'opacity 0.5s ease-in-out',
                                     }}
                                 />
                             </Link>
