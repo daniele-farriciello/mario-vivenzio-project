@@ -21,7 +21,7 @@ export default function PagPage() {
           }}>
         </Grid>
 
-        <Grid xs={8} sx={{ bgcolor: 'background.paper', p: 3, height: '100%', overflow: 'auto', width: '40%', pt: 15}} ml={7}>
+        <Grid xs={8} sx={{ bgcolor: 'background.paper', p: 3, height: '100%', overflow: 'auto', width: '40%', pt: 15, ml: 7}}>
           <RegoularH1 color={dashboardTheme.palette.secondary.main}>About</RegoularH1>
           <Typography variant="body1">
             Welcome, your gateway to the world of Muay Thai! We're thrilled that you've landed on our platform.
