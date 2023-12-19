@@ -39,7 +39,7 @@ const dashboardTheme = createTheme({
     },
     secondary: {
       main: '#000000',
-      light: '#7A7A7A'
+      light: '#1E1E1E'
     }
   },
   typography: {
