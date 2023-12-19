@@ -9,6 +9,7 @@ import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 import SecondPage from '../SecondPage/SecondPage';
 import ThirdPage from '../ThirdSection/ThirdPage';
 import SponsorPage from '../SponsorPage/SponsorPage';
+import Footer from '../Footer/Footer';
 // import { RegoularH1HomePage } from '../../Components/Typography/Typography';
 
 export default function HomePage() {
@@ -25,7 +26,6 @@ export default function HomePage() {
     return (
         <div>
             <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100%' }}>
-            {/* <RegoularH1HomePage fontSize={100} hoverColor={dashboardTheme.palette.customColors.blue} color={dashboardTheme.palette.customColors.white}>TEAM VIVENZIO</RegoularH1HomePage> */}
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%' }} >
                     <Box sx={{ height: '100vh', width: '100vw' }}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
@@ -152,6 +152,7 @@ export default function HomePage() {
             <SecondPage/>
             <ThirdPage/>
             <SponsorPage/>
+            <Footer/>
         </div>
     );
 }

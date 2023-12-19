@@ -30,8 +30,8 @@ export default function SponsorPage() {
 
     return (
         <section>
-            <Paper sx={{ borderColor: dashboardTheme.palette.customColors.red, width: '100%' }}>
-                <RegoularH1 marginLeft={52} textAlign='start'>PARTNERSHIP</RegoularH1>
+            <Paper sx={{ width: '100%' }}>
+                <RegoularH1 marginLeft={37} textAlign='start'>PARTNERSHIP</RegoularH1>
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%', justifyContent: 'space-around' }} >
                     <Box sx={{ height: '60vh', width: '50vw', pb: 6 }}>
                         <Card elevation={10} sx={{ width: '100%', height: '100%', position: 'relative', borderRadius: 10 }}>
