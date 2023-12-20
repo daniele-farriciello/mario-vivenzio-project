@@ -20,9 +20,9 @@ export default function NavBar() {
 
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
                     <Box display={'flex'} flexDirection={'row'} >
-                        <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.blue, 0.85)}`} paddingBottom={0.3}>Chi siamo</RegoularH2>
-                        <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.white, 1.0)}`} paddingBottom={0.3}>Sponsors</RegoularH2>
-                        <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.red, 0.85)}`} paddingBottom={0.3}>Contatti</RegoularH2>
+                        <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.blue, 0.85)}`} transition={'border-bottom 0.5s ease-in-out'} paddingBottom={0.3}>Chi siamo</RegoularH2>
+                        <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.white, 1.0)}`} transition={'border-bottom 0.5s ease-in-out'} paddingBottom={0.3}>Sponsors</RegoularH2>
+                        <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.red, 0.85)}`} transition={'border-bottom 0.5s ease-in-out'} paddingBottom={0.3}>Contatti</RegoularH2>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', ml: -43 }}>
                         <Avatar sx={{ width: 56, height: 56 , mr: 2}} alt="logo" src={logo} />

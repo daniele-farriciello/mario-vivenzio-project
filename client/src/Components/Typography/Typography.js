@@ -31,7 +31,7 @@ export function RegoularH1({ children, color, textAlign = 'center', marginLeft, 
     );
 }
 
-export function RegoularH2({ children, color, fontSize = 30, marginLeft, paddingBottom, marginRight, marginBottom = 2, borderBottom, borderBottomHover, paddingTop = 2, paddingRight, textAlign = 'center', hoverColor = null }) {
+export function RegoularH2({ children, color, fontSize = 30, marginLeft, paddingBottom, marginRight, marginBottom = 2, borderBottom, borderBottomHover, paddingTop = 2, paddingRight, textAlign = 'center', hoverColor = null, transition }) {
     const [hovered, setHovered] = React.useState(false);
 
     return (
@@ -48,7 +48,7 @@ export function RegoularH2({ children, color, fontSize = 30, marginLeft, padding
                 marginBottom: marginBottom,
                 paddingBottom: paddingBottom,
                 paddingTop: paddingTop,
-                transition: 'border-bottom 0.5s ease-in-out',
+                transition: transition,
                 borderBottom: borderBottom,
                 ...(hoverColor && {
                     '&:hover': {
