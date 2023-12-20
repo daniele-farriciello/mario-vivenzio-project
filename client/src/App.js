@@ -15,18 +15,16 @@ function App() {
   return (
     <ThemeProvider theme={dashboardTheme}>
       <BrowserRouter>
-        <ThemeProvider theme={dashboardTheme}>
-          <Routes>
-            <Route path='' element={<HomePage />} />
-            <Route path='/bagPage' element={<BagPage />} />
-            <Route path='/padPage' element={<PagPage />} />
-            <Route path='/sparringPage' element={<SparringPage />} />
-            <Route path='/sponsorPage' element={<SponsorPage />} />
-            <Route path='/footer' element={<Footer />} />
-          </Routes>
-        </ThemeProvider>
+        <NavBar></NavBar>
+        <Routes>
+          <Route path='' element={<HomePage />} />
+          <Route path='/bagPage' element={<BagPage />} />
+          <Route path='/padPage' element={<PagPage />} />
+          <Route path='/sparringPage' element={<SparringPage />} />
+          <Route path='/sponsorPage' element={<SponsorPage />} />
+          <Route path='/footer' element={<Footer />} />
+        </Routes>
       </BrowserRouter>
-      <NavBar></NavBar>
     </ThemeProvider>
   );
 }

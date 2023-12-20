@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { Link, alpha, Paper } from '@mui/material';
-import { RegoularH2 } from '../../Components/Typography/Typography';
 import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
@@ -16,11 +15,11 @@ export default function Footer() {
                 <Toolbar sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'row', pt: 5, pb: 5 }}>
                     <Box display={'flex'} flexDirection={'row'} justifyContent={'space-around'} width={'40%'}>
                         <Link underline="none" color="inherit" href="https://www.google.com/maps/search/?api=1&query=Via+Cimitero,+74,+80039+Saviano+NA,+Italy" target="_blank" rel="noopener noreferrer">
-                            <LocationOnIcon sx={{ fontSize: '2.6rem', color: dashboardTheme.palette.customColors.white, transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
+                            <LocationOnIcon sx={{ fontSize: '2.6rem', color: dashboardTheme.palette.customColors.white, transition: 'color 0.5s', '&:hover': { color: '#FFFB73' } }} />
                         </Link>
 
                         <Link underline="none" color="inherit" href="tel:+393883706025" target="_blank" rel="noopener noreferrer">
-                            <CallIcon sx={{ fontSize: '2.6rem', color: dashboardTheme.palette.customColors.white, transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
+                            <CallIcon sx={{ fontSize: '2.6rem', color: dashboardTheme.palette.customColors.white, transition: 'color 0.5s', '&:hover': { color: '#557C55' } }} />
                         </Link>
 
                         <Link underline="none" color="inherit" href="https://www.instagram.com/mario__vivenzio/" target="_blank" rel="noopener noreferrer">
