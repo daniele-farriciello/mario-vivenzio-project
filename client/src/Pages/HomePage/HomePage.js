@@ -10,16 +10,20 @@ import SecondPage from '../SecondPage/SecondPage';
 import ThirdPage from '../ThirdSection/ThirdPage';
 import SponsorPage from '../SponsorPage/SponsorPage';
 import Footer from '../Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 // import { RegoularH1HomePage } from '../../Components/Typography/Typography';
 
 export default function HomePage() {
+
+    const navigate = useNavigate()
 
     function clickPrivateLessonButton() {
         console.log('clicked')
     }
 
-    function clickMembershipButton() {
+    function clickProssimoGalaButton() {
         console.log('clicked')
+        navigate('/nextGalà')
     }
 
 
@@ -62,7 +66,7 @@ export default function HomePage() {
                             >
                                 <Button
                                     variant="contained"
-                                    onClick={clickMembershipButton}
+                                    onClick={clickProssimoGalaButton}
                                     sx={{
                                         fontFamily: 'Playfair Display, serif',
                                         fontWeight: '200%',

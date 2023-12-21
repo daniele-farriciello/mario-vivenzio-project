@@ -10,6 +10,7 @@ import PagPage from './Pages/PadPage/PagPage';
 import SparringPage from './Pages/SparringPage/SparringPage';
 import SponsorPage from './Pages/SponsorPage/SponsorPage';
 import Footer from './Pages/Footer/Footer';
+import NextGalà from './Pages/NextGalà/NextGalà';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/bagPage' element={<BagPage />} />
           <Route path='/padPage' element={<PagPage />} />
           <Route path='/sparringPage' element={<SparringPage />} />
+          <Route path='/nextGalà' element={<NextGalà />} />
           <Route path='/sponsorPage' element={<SponsorPage />} />
           <Route path='/footer' element={<Footer />} />
         </Routes>
