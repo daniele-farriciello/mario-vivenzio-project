@@ -11,6 +11,7 @@ import SparringPage from './Pages/SparringPage/SparringPage';
 import SponsorPage from './Pages/SponsorPage/SponsorPage';
 import Footer from './Pages/Footer/Footer';
 import NextGalà from './Pages/NextGalà/NextGalà';
+import StoryVivenzioGym from './Pages/RingSide/StoryVivenzioGym/StoryVivenzioGym';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/padPage' element={<PagPage />} />
           <Route path='/sparringPage' element={<SparringPage />} />
           <Route path='/nextGalà' element={<NextGalà />} />
+          <Route path='/storyVivenzioGym' element={<StoryVivenzioGym />} />
           <Route path='/sponsorPage' element={<SponsorPage />} />
           <Route path='/footer' element={<Footer />} />
         </Routes>

@@ -17,7 +17,7 @@ export default function RingSide() {
             <Box sx={{ borderBottom: '2px solid', borderColor: dashboardTheme.palette.customColors.red, width: '15%', margin: '20px auto' }}></Box>
             <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100%' }}>
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%' }} >
-                    <Box sx={{ height: '80vh', width: '100vw' }} onClick={() => navigate('/nextGalà')}>
+                    <Box sx={{ height: '80vh', width: '100vw' }} onClick={() => navigate('/storyVivenzioGym')}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             <div
                                 style={{

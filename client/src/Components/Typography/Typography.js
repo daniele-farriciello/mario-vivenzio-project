@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 
-export function RegoularH1({ children, color, textAlign = 'center', marginLeft, fontSize = 50, marginBottom = 5, marginTop = 3, hoverColor = null }) {
+export function RegoularH1({ children, color, textAlign = 'center', marginLeft, fontSize = 50, marginBottom = 5, paddingTop = 3, hoverColor = null }) {
     const [hovered, setHovered] = React.useState(false);
 
     return (
@@ -14,7 +14,7 @@ export function RegoularH1({ children, color, textAlign = 'center', marginLeft, 
                 marginLeft: marginLeft,
                 color: hovered && hoverColor ? hoverColor : color,
                 marginBottom: marginBottom,
-                paddingTop: marginTop,
+                paddingTop: paddingTop,
                 transition: 'color 0.3s',
                 ...(hoverColor && {
                     '&:hover': {
@@ -66,7 +66,7 @@ export function RegoularH2({ children, color, fontSize = 30, marginLeft, padding
     );
 }
 
-export function RegoularH1HomePage({ children, position = 'absolute', color, fontSize = 30, marginBottom = 2, paddingTop = 20, hoverColor = null }) {
+export default function RegoularH1HomePage({ children, position = 'absolute', color, fontSize = 30, marginBottom = 2, paddingTop = 20, hoverColor = null }) {
     const [hovered, setHovered] = React.useState(false);
     return (
         <Typography
