@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import Video1 from '../../video/workingProgressGala.mp4';
-import Video2 from '../../video/maestro-pao-cleme.mp4';
-import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
-import { TeamVivenzioTitle } from '../../Components/Typography/Typography';
+import Video1 from '../../../video/workingProgressGala.mp4';
+import Video2 from '../../../video/maestro-pao-cleme.mp4';
+import dashboardTheme from '../../../Components/DashboardTheme/DashboardTheme';
+import { TeamVivenzioTitle } from '../../../Components/Typography/Typography';
 
 export default function FightsHistoryPage() {
   return (

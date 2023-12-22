@@ -11,8 +11,8 @@ import SparringPage from './Pages/SparringPage/SparringPage';
 import SponsorPage from './Pages/SponsorPage/SponsorPage';
 import Footer from './Pages/Footer/Footer';
 import NextGalà from './Pages/NextGalà/NextGalà';
-import StoryVivenzioGym from './Pages/RingSide/StoryVivenzioGym/StoryVivenzioGym';
-import FightsHistoryPage from './Pages/FightsHistoryPage/FightsHistoryPage';
+import StoryVivenzioGym from './Pages/StoryVivenzioGym/StoryVivenzioGym';
+import FightsHistoryPage from './Pages/RingSide/FightsHistoryPage/FightsHistoryPage';
 
 function App() {
   return (

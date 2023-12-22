@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import Image from '../../../img/img-maestro.jpg';
+import Image from '../../img/img-maestro.jpg';
 import { Typography } from '@mui/material';
-import { RegoularH1, RegoularH2 } from '../../../Components/Typography/Typography';
-import dashboardTheme from '../../../Components/DashboardTheme/DashboardTheme';
+import { RegoularH1, RegoularH2 } from '../../Components/Typography/Typography';
+import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 
 export default function StoryVivenzioGym() {
   return (
