@@ -8,11 +8,11 @@ import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme'
 import { RegoularH1} from '../../Components/Typography/Typography';
 import { useNavigate } from 'react-router-dom';
 
-export default function ThirdPage() {
+export default function RingSide() {
     const navigate = useNavigate();
 
     return (
-        <section>
+        <section id="ringSideSection">
             <RegoularH1 marginBottom={0}>RING SIDE</RegoularH1>
             <Box sx={{ borderBottom: '2px solid', borderColor: dashboardTheme.palette.customColors.red, width: '15%', margin: '20px auto' }}></Box>
             <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100%' }}>

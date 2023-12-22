@@ -36,7 +36,6 @@ export default function NextGalà() {
         }}
       >
         <Grid
-          item
           xs={12}
           md={6}
           sx={{
@@ -51,7 +50,6 @@ export default function NextGalà() {
             src={Video1}
             autoPlay
             loop
-            muted
             style={{
               borderRadius: '20px',
               maxWidth: '100%',

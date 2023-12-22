@@ -20,6 +20,7 @@ function App() {
         <Routes>
           <Route path='' element={<HomePage />} />
           <Route path='/bagPage' element={<BagPage />} />
+          <Route path='/bagPage' element={<BagPage />} />
           <Route path='/padPage' element={<PagPage />} />
           <Route path='/sparringPage' element={<SparringPage />} />
           <Route path='/nextGalà' element={<NextGalà />} />

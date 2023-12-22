@@ -6,8 +6,8 @@ import { Box, Paper,Button, alpha } from "@mui/material";
 import membershipPic2 from '../../img/clemente-ring.png';
 import membershipPic from '../../img/pasquale-ring.png';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
-import SecondPage from '../SecondPage/SecondPage';
-import ThirdPage from '../ThirdSection/ThirdPage';
+import Activities from '../Activities/Activities';
+import ThirdPage from '../RingSide/RingSide';
 import SponsorPage from '../SponsorPage/SponsorPage';
 import Footer from '../Footer/Footer';
 import { useNavigate } from 'react-router-dom';
@@ -17,10 +17,10 @@ export default function HomePage() {
 
     const navigate = useNavigate()
 
-    function clickPrivateLessonButton() {
-        console.log('clicked')
+    function clickExploreButton() {
+        console.log('clicked');
+        document.getElementById('activitiesSection')?.scrollIntoView({ behavior: 'smooth' });
     }
-
     function clickProssimoGalaButton() {
         console.log('clicked')
         navigate('/nextGalà')
@@ -131,7 +131,7 @@ export default function HomePage() {
                             >
                                 <Button
                                     variant="contained"
-                                    onClick={clickPrivateLessonButton}
+                                    onClick={clickExploreButton}
                                     sx={{
                                         fontFamily: 'Playfair Display, serif',
                                         fontWeight: '200%',
@@ -153,7 +153,7 @@ export default function HomePage() {
                     </Box>
                 </Box>
             </Paper>
-            <SecondPage/>
+            <Activities/>
             <ThirdPage/>
             <SponsorPage/>
             <Footer/>

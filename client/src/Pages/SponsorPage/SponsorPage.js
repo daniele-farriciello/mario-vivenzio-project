@@ -29,7 +29,7 @@ export default function SponsorPage() {
     };
 
     return (
-        <section>
+        <section id='sponsorSection'>
             <Paper sx={{ width: '100%' }}>
                 <RegoularH1 marginLeft={37} textAlign='start'>PARTNERSHIP</RegoularH1>
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%', justifyContent: 'space-around' }} >

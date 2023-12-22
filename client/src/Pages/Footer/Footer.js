@@ -10,7 +10,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export default function Footer() {
     return (
-        <section>
+        <section id='contattiSection'>
             <Paper sx={{ backgroundColor: alpha(dashboardTheme.palette.secondary.main, 0.95), width: '100%', borderRadius: 0 }}>
                 <Toolbar sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'row', pt: 5, pb: 5 }}>
                     <Box display={'flex'} flexDirection={'row'} justifyContent={'space-around'} width={'40%'}>

@@ -10,11 +10,11 @@ import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme'
 import { RegoularH1, RegoularH2 } from '../../Components/Typography/Typography';
 import { useNavigate } from 'react-router-dom';
 
-export default function SecondPage() {
+export default function Activities() {
     const navigate = useNavigate();
 
     return (
-        <section>
+        <section id="activitiesSection">
             <RegoularH1 marginBottom={0}>ATTIVITÀ</RegoularH1>
             <Box sx={{ borderBottom: '2px solid', borderColor: dashboardTheme.palette.customColors.red, width: '15%', margin: '20px auto' }}></Box>
             <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100%' }}>
