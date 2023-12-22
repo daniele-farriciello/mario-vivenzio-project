@@ -25,8 +25,8 @@ export default function NavBar() {
         }
     };
 
-    const scrollToRingSide = () => {
-        document.getElementById('ringSideSection')?.scrollIntoView({ behavior: 'smooth' });
+    const navigateToStoryVivenzioGym = () => {
+        navigate('/fightsHistoryPage')
     };
 
     const scrollToSponsor = () => {
@@ -46,7 +46,7 @@ export default function NavBar() {
 
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
                     <Box display={'flex'} flexDirection={'row'}>
-                        <Box onClick={scrollToRingSide}>
+                        <Box onClick={navigateToStoryVivenzioGym}>
                             <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.blue, 0.85)}`} transition={'border-bottom 0.5s ease-in-out'} paddingBottom={0.3}>Chi siamo</RegoularH2>
                         </Box>
                         <Box onClick={scrollToSponsor}>
