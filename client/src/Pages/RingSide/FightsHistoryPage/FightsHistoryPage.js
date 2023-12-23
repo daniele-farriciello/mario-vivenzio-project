@@ -1,12 +1,32 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Unstable_Grid2';
+import React from 'react';
+import { Box, Grid } from "@mui/material";
+import dashboardTheme from '../../../Components/DashboardTheme/DashboardTheme'
+// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Video1 from '../../../video/workingProgressGala.mp4';
 import Video2 from '../../../video/maestro-pao-cleme.mp4';
-import dashboardTheme from '../../../Components/DashboardTheme/DashboardTheme';
 import { TeamVivenzioTitle } from '../../../Components/Typography/Typography';
 
-export default function FightsHistoryPage() {
+export default function SponsorPage() {
+  // const [currentSponsorIndex, setCurrentSponsorIndex] = useState(0);
+  // const [fadeOut, setFadeOut] = useState(false);
+
+  // const handleNextSponsor = () => {
+  //   setFadeOut(true);
+  //   setTimeout(() => {
+  //     setCurrentSponsorIndex((prevIndex) => (prevIndex + 1) % SponsorData.length);
+  //     setFadeOut(false);
+  //   }, 500); // Duration of the fade out
+  // };
+
+  // const handlePreviousSponsor = () => {
+  //   setFadeOut(true);
+  //   setTimeout(() => {
+  //     setCurrentSponsorIndex((prevIndex) => (prevIndex - 1 + SponsorData.length) % SponsorData.length);
+  //     setFadeOut(false);
+  //   }, 500); // Duration of the fade out
+  // };
+
   return (
     <Box sx={{ flexGrow: 1, height: '100vh', position: 'relative' }}>
       <video
@@ -30,22 +50,35 @@ export default function FightsHistoryPage() {
         spacing={2}
         sx={{
           height: '100%',
-          display: 'flex',        
+          display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          flexDirection: 'column'
         }}
       >
+        <TeamVivenzioTitle paddingTop={6} fontSize={80} marginBottom={6} color={dashboardTheme.palette.primary.main}>WORKING IN PROGRESS</TeamVivenzioTitle>
         <Grid
           xs={12}
           md={6}
           sx={{
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
           }}
         >
-          <TeamVivenzioTitle paddingTop={6} fontSize={80} marginBottom={6} color={dashboardTheme.palette.primary.main}>WORKING IN PROGRESS</TeamVivenzioTitle>
+          <video
+            src={Video1}
+            autoPlay
+            loop
+            style={{
+              borderRadius: '20px',
+              maxWidth: '100%',
+              maxHeight: '60vh',
+              objectFit: 'contain'
+            }}
+          />
+
           <video
             src={Video1}
             autoPlay
