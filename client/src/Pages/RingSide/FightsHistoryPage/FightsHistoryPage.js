@@ -56,7 +56,7 @@ export default function SponsorPage() {
           flexDirection: 'column'
         }}
       >
-        <TeamVivenzioTitle paddingTop={6} fontSize={80} marginBottom={6} color={dashboardTheme.palette.primary.main}>WORKING IN PROGRESS</TeamVivenzioTitle>
+        <TeamVivenzioTitle paddingTop={10} fontSize={80} marginBottom={4} color={dashboardTheme.palette.primary.main}>HYSTORY TEAM VIVENZIO</TeamVivenzioTitle>
         <Grid
           xs={12}
           md={6}
@@ -65,6 +65,7 @@ export default function SponsorPage() {
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
+            gap: '80px',
           }}
         >
           <video
@@ -73,9 +74,10 @@ export default function SponsorPage() {
             loop
             style={{
               borderRadius: '20px',
-              maxWidth: '100%',
-              maxHeight: '60vh',
-              objectFit: 'contain'
+              maxWidth: '48%',
+              maxHeight: '70vh',
+              objectFit: 'contain',
+              marginRight: '10px',
             }}
           />
 
@@ -85,9 +87,10 @@ export default function SponsorPage() {
             loop
             style={{
               borderRadius: '20px',
-              maxWidth: '100%',
-              maxHeight: '60vh',
-              objectFit: 'contain'
+              maxWidth: '48%',
+              maxHeight: '70vh',
+              objectFit: 'contain',
+              marginLeft: '10px',
             }}
           />
         </Grid>
