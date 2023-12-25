@@ -6,7 +6,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import dashboardTheme from './Components/DashboardTheme/DashboardTheme';
 import BagPage from './Pages/BagPage/BagPage';
-import PagPage from './Pages/PadPage/PagPage';
+import PadPage from './Pages/PadPage/PadPage';
 import SparringPage from './Pages/SparringPage/SparringPage';
 import SponsorPage from './Pages/SponsorPage/SponsorPage';
 import Footer from './Pages/Footer/Footer';
@@ -23,7 +23,7 @@ function App() {
           <Route path='' element={<HomePage />} />
           <Route path='/bagPage' element={<BagPage />} />
           <Route path='/bagPage' element={<BagPage />} />
-          <Route path='/padPage' element={<PagPage />} />
+          <Route path='/padPage' element={<PadPage />} />
           <Route path='/sparringPage' element={<SparringPage />} />
           <Route path='/nextGalà' element={<NextGalà />} />
           <Route path='/storyVivenzioGym' element={<StoryVivenzioGym />} />

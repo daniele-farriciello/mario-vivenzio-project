@@ -26,7 +26,7 @@ export default function NavBar() {
     };
 
     const navigateToStoryVivenzioGym = () => {
-        navigate('/fightsHistoryPage')
+        navigate('/storyVivenzioGym')
     };
 
     const scrollToSponsor = () => {
