@@ -5,17 +5,21 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import { Avatar, Link, alpha } from '@mui/material';
+import { Avatar, Link, alpha, useMediaQuery, useTheme } from '@mui/material';
 import { RegoularH2, TeamVivenzioTitle } from '../Typography/Typography';
 import dashboardTheme from '../DashboardTheme/DashboardTheme';
 import logo from '../../img/logo.jpg'
 import { useNavigate, useLocation } from 'react-router-dom';
+import { NavBarPhoneHomePage, NavBarPhoneNotHomePage } from './NavBarPhone';
 
 
 export default function NavBar() {
 
     const navigate = useNavigate();
     const location = useLocation();
+    const theme = useTheme();
+    const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    const isScreenMedium = useMediaQuery(theme.breakpoints.down('md'));
 
     const handleLogoAndTextClick = () => {
         if (location.pathname === '/') {
@@ -42,7 +46,7 @@ export default function NavBar() {
 
     return (
         <>
-            {isHomePage ?
+            {isHomePage && !isScreenSmall && !isScreenMedium && (
                 <Box >
                     <CssBaseline />
                     <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85) }} component="nav">
@@ -80,8 +84,8 @@ export default function NavBar() {
                         </Toolbar>
                     </AppBar>
                 </Box>
-
-                :
+            )}
+            {!isHomePage && !isScreenSmall && !isScreenMedium && (    
                 <Box >
                     <CssBaseline />
                     <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85) }} component="nav">
@@ -104,8 +108,13 @@ export default function NavBar() {
                         </Toolbar>
                     </AppBar>
                 </Box>
-            }
-
+            )}
+            {(isScreenSmall || isScreenMedium ) && isHomePage && (
+                <NavBarPhoneHomePage />
+            )}
+            {(isScreenSmall || isScreenMedium) && !isHomePage && (
+                <NavBarPhoneNotHomePage/>
+            )}
         </>
     );
 }
