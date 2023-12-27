@@ -20,6 +20,7 @@ export default function NavBar() {
     const theme = useTheme();
     const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
     const isScreenMedium = useMediaQuery(theme.breakpoints.down('md'));
+    
 
     const handleLogoAndTextClick = () => {
         if (location.pathname === '/') {
@@ -51,8 +52,8 @@ export default function NavBar() {
                     <CssBaseline />
                     <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85) }} component="nav">
 
-                        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
-                            <Box display={'flex'} flexDirection={'row'}>
+                        <Toolbar sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))' }}>
+                            <Box display={'flex'} flexDirection={'row'} >
                                 <Box onClick={navigateToStoryVivenzioGym}>
                                     <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.blue, 0.85)}`} transition={'border-bottom 0.5s ease-in-out'} paddingBottom={0.3}>Chi siamo</RegoularH2>
                                 </Box>
@@ -63,12 +64,12 @@ export default function NavBar() {
                                     <RegoularH2 marginRight={3} hoverColor={dashboardTheme.palette.secondary.main} borderBottom={`2px solid transparent`} borderBottomHover={`2px solid ${alpha(dashboardTheme.palette.customColors.red, 0.85)}`} transition={'border-bottom 0.5s ease-in-out'} paddingBottom={0.3}>Contatti</RegoularH2>
                                 </Box>
                             </Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', ml: -43, cursor: 'pointer' }} onClick={handleLogoAndTextClick}>
+                            <Box sx={{ display: 'flex' ,justifySelf: 'center', alignItems: 'center', flexDirection: 'row', cursor: 'pointer' }} onClick={handleLogoAndTextClick}>
                                 <Avatar sx={{ width: 56, height: 56, mr: 2 }} alt="logo" src={logo} />
                                 <TeamVivenzioTitle >TEAM VIVENZIO</TeamVivenzioTitle>
                             </Box>
 
-                            <Box display={'flex'} justifyContent={'flex-end'}>
+                            <Box display={'flex'} justifySelf={'end'} flexDirection={'row'}>
                                 <Box sx={{ marginRight: '20px' }}>
                                     <Link underline="none" color="inherit" href="https://www.instagram.com/mario__vivenzio/" target="_blank" rel="noopener noreferrer">
                                         <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
@@ -90,17 +91,17 @@ export default function NavBar() {
                     <CssBaseline />
                     <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85) }} component="nav">
 
-                        <Toolbar sx={{ display: 'flex', justifyContent: 'space-evenly', flexDirection: 'row' }}>
-                            <Box sx={{ marginRight: '20px' }}>
+                        <Toolbar sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))' }}>
+                            <Box sx={{ display: 'flex', justifySelf: 'center' }}>
                                 <Link underline="none" color="inherit" href="https://www.instagram.com/mario__vivenzio/" target="_blank" rel="noopener noreferrer">
                                     <FacebookIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
                                 </Link>
                             </Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={handleLogoAndTextClick}>
+                            <Box sx={{ display: 'flex' ,justifySelf: 'center', alignItems: 'center', flexDirection: 'row', cursor: 'pointer'}} onClick={handleLogoAndTextClick}>
                                 <Avatar sx={{ width: 56, height: 56, mr: 2 }} alt="logo" src={logo} />
                                 <TeamVivenzioTitle >TEAM VIVENZIO</TeamVivenzioTitle>
                             </Box>
-                            <Box sx={{ display: { xs: 'none', sm: 'block', marginRight: '10px' } }}>
+                            <Box sx={{display: 'flex', justifySelf: 'center'}}>
                                 <Link underline="none" color="inherit" href="https://www.facebook.com/mario.vivenzio.58/" target="_blank" rel="noopener noreferrer">
                                     <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
                                 </Link>
