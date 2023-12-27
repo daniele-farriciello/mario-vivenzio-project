@@ -2,7 +2,7 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
-import { Box, Paper,Button, alpha } from "@mui/material";
+import { Box, Paper,Button, alpha, useMediaQuery, useTheme  } from "@mui/material";
 import membershipPic2 from '../../img/clemente-ring.png';
 import membershipPic from '../../img/pasquale-ring.png';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
@@ -11,10 +11,13 @@ import ThirdPage from '../RingSide/RingSide';
 import SponsorPage from '../SponsorPage/SponsorPage';
 import Footer from '../Footer/Footer';
 import { useNavigate } from 'react-router-dom';
+
 // import { RegoularH1HomePage } from '../../Components/Typography/Typography';
 
 export default function HomePage() {
 
+    const theme = useTheme();
+    const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
     const navigate = useNavigate()
 
     function clickExploreButton() {
@@ -30,7 +33,12 @@ export default function HomePage() {
     return (
         <div>
             <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100%' }}>
-                <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%' }} >
+                <Box sx={{ 
+                    display: 'flex', 
+                    alignItems: "center", 
+                    flexDirection: isScreenSmall ? "column" : "row", // Stack items in a column on small screens
+                    width: '100%' 
+                }}>
                     <Box sx={{ height: '100vh', width: '100vh' }}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             <CardMedia

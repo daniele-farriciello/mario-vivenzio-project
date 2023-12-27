@@ -41,7 +41,7 @@ export default function PadPage() {
         <Grid
           container
           sx={{
-            marginTop: { xs: '60%', sm: '40%', md: '30%', lg: '5%', xl: '5%' },
+            marginTop: { xs: '60%', sm: '40%', md: '10%', lg: '5%', xl: '5%' },
             width: { xs: '90%', sm: '80%', md: '60%', lg: '50%', xl: '40%' },
             height: 'auto',
             display: 'flex',
