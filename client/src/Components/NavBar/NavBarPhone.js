@@ -54,45 +54,46 @@ export function NavBarPhoneHomePage() {
             <CssBaseline />
             <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85) }} component="nav">
 
-                <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
-                    <Button
-                        id="fade-button"
-                        aria-controls={open ? 'fade-menu' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                    >
-                        <MenuIcon />
-                    </Button>
-                    <Menu
-                        id="fade-menu"
-                        MenuListProps={{
-                            'aria-labelledby': 'fade-button',
-                        }}
-
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        TransitionComponent={Fade}
-                    >
-                        <MenuItem onClick={navigateToStoryVivenzioGym}>Chi siamo</MenuItem>
-                        <MenuItem onClick={scrollToSponsor}>Sponsors</MenuItem>
-                        <MenuItem onClick={scrollToContatti}>Contatti</MenuItem>
-                    </Menu>
-                    <Box sx={{ display: 'flex', alignItems: 'center', ml: -43, cursor: 'pointer' }} onClick={handleLogoAndTextClick}>
+                <Toolbar sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))' }}>
+                    <Box justifySelf={'start'}>
+                        <Button
+                            id="fade-button"
+                            aria-controls={open ? 'fade-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
+                            onClick={handleClick}
+                        >
+                            <MenuIcon sx={{  fontSize: 40, color: 'black' }}/>
+                        </Button>
+                        <Menu
+                            id="fade-menu"
+                            MenuListProps={{
+                                'aria-labelledby': 'fade-button',
+                            }}
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                            TransitionComponent={Fade}
+                        >
+                            <MenuItem onClick={navigateToStoryVivenzioGym} sx={{ color: 'black' }}>Chi siamo</MenuItem>
+                            <MenuItem onClick={scrollToSponsor} sx={{ color: 'black' }}>Sponsors</MenuItem>
+                            <MenuItem onClick={scrollToContatti} sx={{ color: 'black' }}>Contatti</MenuItem>
+                        </Menu>
+                    </Box>
+                    <Box sx={{ display: 'flex', justifySelf: 'center', alignItems: 'center', flexDirection: 'row', cursor: 'pointer' }} onClick={handleLogoAndTextClick}>
                         <Avatar sx={{ width: 56, height: 56, mr: 2 }} alt="logo" src={logo} />
-                        <TeamVivenzioTitle >TEAM VIVENZIO</TeamVivenzioTitle>
+                        <TeamVivenzioTitle fontSize={40}>TEAM VIVENZIO</TeamVivenzioTitle>
                     </Box>
 
-                    <Box display={'flex'} justifyContent={'flex-end'}>
+                    <Box display={'flex'} justifySelf={'end'}  flexDirection={'row'}>
                         <Box sx={{ marginRight: '20px' }}>
                             <Link underline="none" color="inherit" href="https://www.instagram.com/mario__vivenzio/" target="_blank" rel="noopener noreferrer">
-                                <FacebookIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
+                                <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
                             </Link>
                         </Box>
-                        <Box sx={{ display: { xs: 'none', sm: 'block', marginRight: '10px' } }}>
+                        <Box>
                             <Link underline="none" color="inherit" href="https://www.facebook.com/mario.vivenzio.58/" target="_blank" rel="noopener noreferrer">
-                                <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
+                                <FacebookIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
                             </Link>
                         </Box>
                     </Box>
