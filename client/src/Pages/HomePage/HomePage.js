@@ -31,7 +31,7 @@ export default function HomePage() {
         <div>
             <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100%' }}>
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%' }} >
-                    <Box sx={{ height: '100vh', width: '100vw' }}>
+                    <Box sx={{ height: '100vh', width: '100vh' }}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             <CardMedia
                                 component="img"
@@ -86,7 +86,7 @@ export default function HomePage() {
                             </CardActions>
                         </Card>
                     </Box>
-                    <Box sx={{ height: '100vh', width: '100vw' }}>
+                    <Box sx={{ height: '100vh', width: '100vh' }}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             {/* Overlay for darkening the image */}
                             <div

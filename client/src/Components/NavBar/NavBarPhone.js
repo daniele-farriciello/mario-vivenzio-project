@@ -88,12 +88,12 @@ export function NavBarPhoneHomePage() {
                     <Box display={'flex'} justifySelf={'end'}  flexDirection={'row'}>
                         <Box sx={{ marginRight: '20px' }}>
                             <Link underline="none" color="inherit" href="https://www.instagram.com/mario__vivenzio/" target="_blank" rel="noopener noreferrer">
-                                <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
+                                <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
                             </Link>
                         </Box>
                         <Box>
                             <Link underline="none" color="inherit" href="https://www.facebook.com/mario.vivenzio.58/" target="_blank" rel="noopener noreferrer">
-                                <FacebookIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
+                                <FacebookIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
                             </Link>
                         </Box>
                     </Box>
