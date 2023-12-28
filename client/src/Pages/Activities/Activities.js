@@ -2,7 +2,7 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
-import { Box, Paper } from "@mui/material";
+import { Box, Paper, useMediaQuery, useTheme  } from "@mui/material";
 import membershipPic1 from '../../img/SecondPage1.jpeg';
 import membershipPic2 from '../../img/SecondPage2.jpg';
 import membershipPic3 from '../../img/SecondPage3.jpg';
@@ -11,14 +11,23 @@ import { RegoularH1, RegoularH2 } from '../../Components/Typography/Typography';
 import { useNavigate } from 'react-router-dom';
 
 export default function Activities() {
+
+    const theme = useTheme();
+    const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
     const navigate = useNavigate();
 
     return (
         <section id="activitiesSection">
             <RegoularH1 marginBottom={0}>ATTIVITÀ</RegoularH1>
             <Box sx={{ borderBottom: '2px solid', borderColor: dashboardTheme.palette.customColors.red, width: '15%', margin: '20px auto' }}></Box>
-            <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100%' }}>
-                <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%' }} >
+            <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100vw' }}>
+                <Box sx={{ 
+                        display: 'flex', 
+                        alignItems: "center", 
+                        flexDirection: isScreenSmall ? "column" : "row", 
+                        width: '100%' 
+                        }} 
+                >
                     <Box sx={{ height: '50vh', width: '100vw' }} onClick={() => navigate('/bagPage')}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             <div

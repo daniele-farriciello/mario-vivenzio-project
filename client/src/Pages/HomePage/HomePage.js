@@ -79,8 +79,8 @@ export default function HomePage() {
                                         fontFamily: 'Playfair Display, serif',
                                         fontWeight: '200%',
                                         borderRadius: '20px',
-                                        fontSize: '150%',         // Increase font size to make text larger
-                                        padding: '15px 30px',       // Increase padding for a larger button
+                                        fontSize: isScreenSmall ? '100%' : '150%',     
+                                        padding: isScreenSmall ? '10px 20px' : '15px 30px',
                                         backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.7),
                                         transition: 'transform 0.5s, color 0.5s, background 0.5s',
                                         ':hover': {
@@ -143,8 +143,8 @@ export default function HomePage() {
                                         fontFamily: 'Playfair Display, serif',
                                         fontWeight: '200%',
                                         borderRadius: '20px',
-                                        fontSize: '150%',         // Increase font size to make text larger
-                                        padding: '15px 30px',       // Increase padding for a larger button
+                                        fontSize: isScreenSmall ? '100%' : '150%',     
+                                        padding: isScreenSmall ? '20px 30px' : '15px 30px',
                                         backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.7),
                                         transition: 'transform 0.5s, color 0.5s, background 0.5s',
                                         ':hover': {
