@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Card from '@mui/material/Card';
-import { Box, Paper, alpha } from "@mui/material";
+import { Box, Paper, alpha, useMediaQuery, useTheme } from "@mui/material";
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme'
 import { RegoularH2, RegoularH1 } from '../../Components/Typography/Typography';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -11,6 +11,9 @@ import { SponsorData } from './SponsorData';
 export default function SponsorPage() {
     const [currentSponsorIndex, setCurrentSponsorIndex] = useState(0);
     const [fadeOut, setFadeOut] = useState(false);
+    const theme = useTheme();
+    const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    const isScreenMedium = useMediaQuery(theme.breakpoints.down('md'));
 
     const handleNextSponsor = () => {
         setFadeOut(true);
@@ -30,21 +33,31 @@ export default function SponsorPage() {
 
     return (
         <section id='sponsorSection'>
-            <Paper sx={{ width: '100%' }}>
-                <RegoularH1 marginLeft={37} textAlign='start'>PARTNERSHIP</RegoularH1>
-                <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%', justifyContent: 'space-around' }} >
-                    <Box sx={{ height: '60vh', width: '50vw', pb: 6 }}>
-                        <Card elevation={10} sx={{ width: '100%', height: '100%', position: 'relative', borderRadius: 10 }}>
+            <Paper width={'100vw'}>
+                <Box
+                    sx={{
+                        width: '100%',
+                        display: 'grid',
+                        gridTemplateColumns: isScreenMedium ? '1fr' : '60% 25%', // Adjust column sizes based on screen size
+                        gap: isScreenMedium ? '0' : '20px', // Add gap for larger screens
+                        paddingBottom: '3%',
+                    }}
+                >
+                    {/* Sponsorship Box */}
+                    <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column' }}>
+                        <RegoularH1 fontSize={isScreenSmall ? 35 : 45}>Partnership</RegoularH1>
+                        <Card elevation={10} sx={{
+                            width: '100%',
+                            maxWidth: isScreenSmall ? '300px' : '500px',
+                            height: isScreenSmall ? '220px' : '350px',
+                            position: 'relative',
+                            borderRadius: 10
+                        }}>
                             <Link to={SponsorData[currentSponsorIndex].link} target="_blank">
                                 <img
                                     src={SponsorData[currentSponsorIndex].img}
                                     alt="Sponsor"
                                     style={{
-                                        position: 'absolute',
-                                        top: 0,
-                                        left: 0,
-                                        right: 0,
-                                        bottom: 0,
                                         objectFit: 'contain',
                                         width: '100%',
                                         height: '100%',
@@ -58,33 +71,46 @@ export default function SponsorPage() {
                                     display: 'flex',
                                     justifyContent: 'space-between',
                                     position: 'absolute',
-                                    bottom: '38%',
+                                    bottom: isScreenSmall ? '42%' : '40%',
                                     left: 0,
                                     right: 0,
-                                    padding: '15px 30px',
+                                    padding: isScreenSmall ? '5px 5px' : '15px 30px',
                                 }}
                             >
                                 <ArrowBackIosIcon
                                     sx={{
                                         color: alpha(dashboardTheme.palette.secondary.main, 0.75),
-                                        fontSize: 50,
+                                        fontSize: isScreenSmall ? 30 : 50,
                                         cursor: 'pointer',
                                     }}
                                     onClick={handlePreviousSponsor}
+                                    aria-label="Previous sponsor"
                                 />
                                 <ArrowForwardIosIcon
                                     sx={{
                                         cursor: 'pointer',
                                         color: alpha(dashboardTheme.palette.secondary.main, 0.75),
-                                        fontSize: 50,
+                                        fontSize: isScreenSmall ? 30 : 50
                                     }}
                                     onClick={handleNextSponsor}
+                                    aria-label="Next sponsor"
                                 />
                             </Box>
                         </Card>
                     </Box>
-                    <Box sx={{ height: '60vh', width: '30vw', textAlign: 'center', pt: 7 }}>
-                        <RegoularH2>IL NOSTRO OBIETTIVO È PROMUOVERE L'ECCELLENZA SPORTIVA E OFFRIRE SPETTACOLI EMOZIONANTI SUL RING. UNITEVI A NOI PER VIVERE L'ENERGIA UNICA DI QUESTO EVENTO STRAORDINARIO E GODERVI COMBATTIMENTI MOZZAFIATO</RegoularH2>
+                    <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: isScreenMedium ? 'center' : 'flex-start', // Center the content on medium screens
+                        paddingTop: isScreenMedium ? '0' : '20%',
+                        width: isScreenMedium ? '70%' : '100%',
+                        margin: isScreenMedium ? 'auto' : '0', // Center the box on medium screens
+                    }}
+                    >
+                        <RegoularH2 fontSize={isScreenSmall ? 15 : 30}>
+                            Il nostro obiettivo è promuovere l'eccellenza sportiva e offrire spettacoli emozionanti sul ring.
+                            Unitevi a noi per vivere l'energia unica di questo evento straordinario e godervi combattimenti mozzafiato.
+                        </RegoularH2>
                     </Box>
                 </Box>
             </Paper>

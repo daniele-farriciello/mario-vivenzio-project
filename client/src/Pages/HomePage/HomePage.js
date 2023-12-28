@@ -36,7 +36,7 @@ export default function HomePage() {
                 <Box sx={{ 
                     display: 'flex', 
                     alignItems: "center", 
-                    flexDirection: "row", // Stack items in a column on small screens
+                    flexDirection: "row",
                     width: '100%' 
                 }}>
                     <Box sx={{ height: '100vh', width: '100vh' }}>
@@ -162,7 +162,7 @@ export default function HomePage() {
             </Paper>
             <Activities/>
             <ThirdPage/>
-            {/* <SponsorPage/> */}
+            <SponsorPage/>
             <Footer/>
         </div>
     );
