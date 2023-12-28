@@ -32,11 +32,11 @@ export default function HomePage() {
 
     return (
         <div>
-            <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100%' }}>
+            <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100vw' }}>
                 <Box sx={{ 
                     display: 'flex', 
                     alignItems: "center", 
-                    flexDirection: isScreenSmall ? "column" : "row", // Stack items in a column on small screens
+                    flexDirection: "row", // Stack items in a column on small screens
                     width: '100%' 
                 }}>
                     <Box sx={{ height: '100vh', width: '100vh' }}>
@@ -96,7 +96,6 @@ export default function HomePage() {
                     </Box>
                     <Box sx={{ height: '100vh', width: '100vh' }}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
-                            {/* Overlay for darkening the image */}
                             <div
                                 style={{
                                     position: 'absolute',
@@ -163,7 +162,7 @@ export default function HomePage() {
             </Paper>
             <Activities/>
             <ThirdPage/>
-            <SponsorPage/>
+            {/* <SponsorPage/> */}
             <Footer/>
         </div>
     );

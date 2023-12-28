@@ -52,8 +52,7 @@ export function NavBarPhoneHomePage() {
     return (
         <Box>
             <CssBaseline />
-            <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85) }} component="nav">
-
+            <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85), minHeight: '56px' }} component="nav">
                 <Toolbar sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))' }}>
                     <Box justifySelf={'start'}>
                         <Button
@@ -81,19 +80,19 @@ export function NavBarPhoneHomePage() {
                         </Menu>
                     </Box>
                     <Box sx={{ display: 'flex', justifySelf: 'center', alignItems: 'center', flexDirection: 'row', cursor: 'pointer' }} onClick={handleLogoAndTextClick}>
-                        <Avatar sx={{ width: 56, height: 56, mr: 2 }} alt="logo" src={logo} />
-                        <TeamVivenzioTitle fontSize={40}>TEAM VIVENZIO</TeamVivenzioTitle>
+                        <Avatar sx={{ width: 40, height: 40, mr: 2 }} alt="logo" src={logo} />
+                        <TeamVivenzioTitle fontSize={30}>TEAM VIVENZIO</TeamVivenzioTitle>
                     </Box>
 
                     <Box display={'flex'} justifySelf={'end'}  flexDirection={'row'}>
-                        <Box sx={{ marginRight: '20px' }}>
+                        <Box sx={{ marginRight: '10px' }}>
                             <Link underline="none" color="inherit" href="https://www.instagram.com/mario__vivenzio/" target="_blank" rel="noopener noreferrer">
-                                <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
+                                <InstagramIcon sx={{ fontSize: '2.5rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
                             </Link>
                         </Box>
                         <Box>
                             <Link underline="none" color="inherit" href="https://www.facebook.com/mario.vivenzio.58/" target="_blank" rel="noopener noreferrer">
-                                <FacebookIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
+                                <FacebookIcon sx={{ fontSize: '2.5rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
                             </Link>
                         </Box>
                     </Box>
@@ -119,21 +118,21 @@ export function NavBarPhoneNotHomePage() {
     return (
         <Box>
             <CssBaseline />
-            <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85) }} component="nav">
+            <AppBar sx={{ backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.85), minHeight: '56px' }} component="nav">
 
                 <Toolbar sx={{display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))'}}>
                     <Box justifySelf={'start'}>
                         <Link underline="none" color="inherit" href="https://www.instagram.com/mario__vivenzio/" target="_blank" rel="noopener noreferrer">
-                            <FacebookIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
+                            <FacebookIcon sx={{ fontSize: '2.5rem', transition: 'color 0.5s', '&:hover': { color: '#3876BF' } }} />
                         </Link>
                     </Box>
                     <Box sx={{ display: 'flex', justifySelf: 'center', alignItems: 'center', flexDirection: 'row', cursor: 'pointer' }} onClick={handleLogoAndTextClick}>
-                        <Avatar sx={{ width: 56, height: 56, mr: 2 }} alt="logo" src={logo} />
-                        <TeamVivenzioTitle fontSize={40}>TEAM VIVENZIO</TeamVivenzioTitle>
+                        <Avatar sx={{ width: 40, height: 40, mr: 2 }} alt="logo" src={logo} />
+                        <TeamVivenzioTitle fontSize={30}>TEAM VIVENZIO</TeamVivenzioTitle>
                     </Box>
                     <Box justifySelf={'end'}  >
                         <Link underline="none" color="inherit" href="https://www.facebook.com/mario.vivenzio.58/" target="_blank" rel="noopener noreferrer">
-                            <InstagramIcon sx={{ fontSize: '3rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
+                            <InstagramIcon sx={{ fontSize: '2.5rem', transition: 'color 0.5s', '&:hover': { color: '#C13584' } }} />
                         </Link>
                     </Box>
                 </Toolbar>
