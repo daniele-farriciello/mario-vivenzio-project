@@ -1,19 +1,23 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import { Typography, alpha } from '@mui/material';
+import { Typography, alpha, useMediaQuery, useTheme } from '@mui/material';
 import { RegoularH2, TeamVivenzioTitle } from '../../Components/Typography/Typography';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 import Video from '../../video/maestro-pao-cleme.mp4';
+import Image from '../../img/SecondPage2.jpg'
 
 export default function PadPage() {
+  const theme = useTheme();
+  const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
+  const isScreenMedium = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
+
     <Box sx={{ flexGrow: 1, height: '100vh', position: 'relative', overflowX: 'hidden' }}>
-      <video
-        autoPlay
-        loop
-        muted
+      {isScreenSmall ?
+        <img
+        src={Image}
         style={{
           position: 'absolute',
           width: '100%',
@@ -21,12 +25,27 @@ export default function PadPage() {
           objectFit: 'cover',
           top: 0,
           left: 0,
-          filter: 'blur(8px)',
           zIndex: -1
         }}
-        src={Video}
       />
-
+        :
+        <video
+          autoPlay
+          loop
+          muted
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            top: 0,
+            left: 0,
+            filter: 'blur(8px)',
+            zIndex: -1
+          }}
+          src={Video}
+        />
+      }
       <Grid
         container
         sx={{
@@ -41,7 +60,8 @@ export default function PadPage() {
         <Grid
           container
           sx={{
-            marginTop: { xs: '60%', sm: '40%', md: '10%', lg: '5%', xl: '5%' },
+            marginTop: { xs: '50%', sm: '20%', md: '10%', lg: '5%', xl: '5%' },
+            marginBottom: { xs: '5%', sm: '5%', md: '5%'},
             width: { xs: '90%', sm: '80%', md: '60%', lg: '50%', xl: '40%' },
             height: 'auto',
             display: 'flex',
