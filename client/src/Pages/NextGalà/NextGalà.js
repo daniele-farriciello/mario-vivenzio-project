@@ -3,12 +3,32 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Video1 from '../../video/workingProgressGala.mp4';
 import Video2 from '../../video/maestro-pao-cleme.mp4';
+import { useMediaQuery, useTheme } from '@mui/material';
+import Image from '../../img/mario-cleme-corner.jpg'
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 import { TeamVivenzioTitle } from '../../Components/Typography/Typography';
 
 export default function NextGalà() {
+  const theme = useTheme();
+  const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
-    <Box sx={{ flexGrow: 1, height: '100vh', position: 'relative' }}>
+    <Box sx={{ flexGrow: 1, height: '100vh', position: 'relative', overflowX: 'hidden' }}>
+      {isScreenSmall ?
+        <img
+        alt='background-next-gala'
+        src={Image}
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          top: 0,
+          left: 0,
+          zIndex: -1
+        }}
+      />
+        :
       <video
         autoPlay
         loop
@@ -25,6 +45,7 @@ export default function NextGalà() {
         }}
         src={Video2}
       />
+      }
       <Grid
         container
         spacing={2}
@@ -45,7 +66,7 @@ export default function NextGalà() {
             justifyContent: 'center',
           }}
         >
-          <TeamVivenzioTitle paddingTop={6} fontSize={80} marginBottom={6} color={dashboardTheme.palette.primary.main}>WORKING IN PROGRESS</TeamVivenzioTitle>
+          <TeamVivenzioTitle marginTop={isScreenSmall ? 8 : 5} marginBottom={!isScreenSmall && 5} fontSize={80} color={dashboardTheme.palette.primary.main}>WORKING IN PROGRESS</TeamVivenzioTitle>
           <video
             src={Video1}
             autoPlay

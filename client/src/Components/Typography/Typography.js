@@ -96,13 +96,14 @@ export default function RegoularH1HomePage({ children, position = 'absolute', co
     );
 }
 
-export function TeamVivenzioTitle({ children, color, fontSize = 50, marginLeft = null, marginBottom = 0, paddingTop = 2, paddingRight, textAlign = 'center', hoverColor = null }) {
+export function TeamVivenzioTitle({ children, color, fontSize = 50, marginTop, marginLeft = null, marginBottom = 0, paddingTop = 2, paddingRight, textAlign = 'center', hoverColor = null }) {
     const [hovered, setHovered] = React.useState(false);
 
     return (
         <Typography
             variant="h2"
             sx={{
+                marginTop: marginTop,
                 paddingRight: paddingRight,
                 marginLeft: marginLeft,
                 textAlign: textAlign,
