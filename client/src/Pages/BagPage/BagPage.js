@@ -4,7 +4,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { Typography, alpha, useMediaQuery, useTheme } from '@mui/material';
 import { RegoularH2, TeamVivenzioTitle } from '../../Components/Typography/Typography';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
-import Video from '../../video/maestro-pao-cleme.mp4';
+import Video from '../../video/sacco-clemente.mp4';
 import Image from '../../img/SecondPage1.jpeg'
 
 export default function PadPage() {
@@ -40,7 +40,7 @@ export default function PadPage() {
             objectFit: 'cover',
             top: 0,
             left: 0,
-            filter: 'blur(8px)',
+            filter: 'blur(5px)',
             zIndex: -1
           }}
           src={Video}

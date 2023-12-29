@@ -4,7 +4,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { Typography, alpha, useMediaQuery, useTheme } from '@mui/material';
 import { RegoularH2, TeamVivenzioTitle } from '../../Components/Typography/Typography';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
-import Video from '../../video/maestro-pao-cleme.mp4';
+import Video from '../../video/video-annamaria-pao.mp4';
 import Image from '../../img/photo-grigia-pao-maestro.jpg'
 
 export default function PadPage() {
@@ -16,18 +16,18 @@ export default function PadPage() {
     <Box sx={{ flexGrow: 1, height: '100vh', position: 'relative', overflowX: 'hidden' }}>
       {isScreenSmall ?
         <img
-        alt='Pad'
-        src={Image}
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          top: 0,
-          left: 0,
-          zIndex: -1
-        }}
-      />
+          alt='Pad'
+          src={Image}
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            top: 0,
+            left: 0,
+            zIndex: -1
+          }}
+        />
         :
         <video
           autoPlay
@@ -40,7 +40,7 @@ export default function PadPage() {
             objectFit: 'cover',
             top: 0,
             left: 0,
-            filter: 'blur(8px)',
+            filter: 'blur(2px)',
             zIndex: -1
           }}
           src={Video}
@@ -61,7 +61,7 @@ export default function PadPage() {
           container
           sx={{
             marginTop: { xs: '85%', sm: '20%', md: '10%', lg: '5%', xl: '5%' },
-            marginBottom: { xs: '15%', sm: '5%', md: '5%'},
+            marginBottom: { xs: '15%', sm: '5%', md: '5%' },
             width: { xs: '90%', sm: '80%', md: '60%', lg: '50%', xl: '40%' },
             height: 'auto',
             display: 'flex',
