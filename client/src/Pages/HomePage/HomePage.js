@@ -4,7 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
 import { Box, Paper,Button, alpha, useMediaQuery, useTheme  } from "@mui/material";
 import membershipPic2 from '../../img/clemente-ring.png';
-import membershipPic from '../../img/pasquale-ring.png';
+import membershipPic from '../../img/clemente-homePage.jpg';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
 import Activities from '../Activities/Activities';
 import ThirdPage from '../RingSide/RingSide';

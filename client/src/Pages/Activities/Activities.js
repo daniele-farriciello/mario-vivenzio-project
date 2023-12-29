@@ -5,7 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import { Box, Paper, useMediaQuery, useTheme  } from "@mui/material";
 import membershipPic1 from '../../img/SecondPage1.jpeg';
 import membershipPic2 from '../../img/SecondPage2.jpg';
-import membershipPic3 from '../../img/SecondPage3.jpg';
+import membershipPic3 from '../../img/homePage2.jpg';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme'
 import { RegoularH1, RegoularH2 } from '../../Components/Typography/Typography';
 import { useNavigate } from 'react-router-dom';

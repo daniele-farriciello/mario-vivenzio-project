@@ -80,7 +80,7 @@ export default function PadPage() {
             Il Pao è un attrezzo essenziale per l'allenamento in Muay Thai, utilizzato per migliorare precisione e potenza nei colpi.
             Permette di esercitarsi in sicurezza. Simula situazioni di combattimento reale, essenziale per la pratica tecnica.
           </Typography>
-          <RegoularH2 color={dashboardTheme.palette.secondary.main}>Tecniche e Esercizi con il Pao</RegoularH2>
+          <RegoularH2 fontSize={{ xs: '24px', sm: '26px', md: '28px', lg: '30px', xl: '32px' }} color={dashboardTheme.palette.secondary.main}>Tecniche e Esercizi con il Pao</RegoularH2>
           <Typography color={dashboardTheme.palette.secondary.light} variant="body1" textAlign={'center'}>
             Gli esercizi con il Pao spaziano da sequenze di base a combinazioni avanzate, adatti a tutti i livelli di esperienza.
             L'istruttore guida i praticanti attraverso vari esercizi, enfatizzando non solo la corretta postura e tecnica, ma anche l'importanza della presenza mentale e del controllo emotivo durante l'allenamento.
