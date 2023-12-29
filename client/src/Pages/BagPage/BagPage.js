@@ -10,13 +10,13 @@ import Image from '../../img/SecondPage1.jpeg'
 export default function PadPage() {
   const theme = useTheme();
   const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
-  const isScreenMedium = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
 
     <Box sx={{ flexGrow: 1, height: '100vh', position: 'relative', overflowX: 'hidden' }}>
       {isScreenSmall ?
         <img
+        alt='Bag'
         src={Image}
         style={{
           position: 'absolute',
@@ -83,7 +83,7 @@ export default function PadPage() {
           <Typography color={dashboardTheme.palette.secondary.light} variant="body1" textAlign={'center'}>
           Gli esercizi con il sacco variano da semplici colpi di base a combinazioni più complesse, adatti a tutti i livelli di esperienza. Permette ai praticanti di migliorare la propria resistenza e forza. L'istruttore può guidare i praticanti attraverso una serie di esercizi che aiutano a migliorare la velocità, la precisione e la potenza.
           </Typography>
-          <RegoularH2 fontSize={{ xs: '24px', sm: '26px', md: '28px', lg: '30px', xl: '32px' }}color={dashboardTheme.palette.secondary.main}>
+          <RegoularH2 fontSize={{ xs: '24px', sm: '26px', md: '28px', lg: '30px', xl: '32px' }} color={dashboardTheme.palette.secondary.main}>
             Il Sacco come Strumento di Crescita Spirituale
           </RegoularH2>
           <Typography color={dashboardTheme.palette.secondary.light} variant="body1" textAlign={'center'}>

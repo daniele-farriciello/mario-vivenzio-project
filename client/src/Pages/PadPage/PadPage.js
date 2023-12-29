@@ -10,13 +10,13 @@ import Image from '../../img/photo-grigia-pao-maestro.jpg'
 export default function PadPage() {
   const theme = useTheme();
   const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
-  const isScreenMedium = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
 
     <Box sx={{ flexGrow: 1, height: '100vh', position: 'relative', overflowX: 'hidden' }}>
       {isScreenSmall ?
         <img
+        alt='Pad'
         src={Image}
         style={{
           position: 'absolute',
