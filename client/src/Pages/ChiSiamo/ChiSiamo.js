@@ -3,24 +3,24 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
 import { Box, Paper, Button, alpha, useMediaQuery, useTheme } from "@mui/material";
-import membershipPic1 from '../../img/ring-gruppo.png';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme'
-import { RegoularH1} from '../../Components/Typography/Typography';
-// import { useNavigate } from 'react-router-dom';
+import { RegoularH1 } from '../../Components/Typography/Typography';
+import { useNavigate } from 'react-router-dom';
+import Video from '../../video/generale-allenamento.mp4';
 
-export default function RingSide() {
+export default function ChiSiamo() {
 
     const theme = useTheme();
     const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return (
-        <section id="ringSideSection">
-            <RegoularH1 marginBottom={0}>RING SIDE</RegoularH1>
+        <section id="chiSiamoSection">
+            <RegoularH1 marginBottom={0}>CHI SIAMO</RegoularH1>
             <Box sx={{ borderBottom: '2px solid', borderColor: dashboardTheme.palette.customColors.red, width: '15%', margin: '20px auto' }}></Box>
             <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100vw' }}>
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%' }} >
-                    <Box sx={{ height: '80vh', width: '100%' }}>  {/*  onClick={() => navigate('/fightsHistoryPage')} * */}
+                    <Box sx={{ height: '80vh', width: '100%' }} onClick={() => navigate('/storyVivenzioGym')}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             <div
                                 style={{
@@ -32,7 +32,11 @@ export default function RingSide() {
                                 }}
                             />
                             <CardMedia
-                                component="img"
+                                component="video"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
                                 sx={{
                                     position: 'absolute',
                                     top: 0,
@@ -42,16 +46,16 @@ export default function RingSide() {
                                     objectFit: 'cover',
                                     width: '100%',
                                     height: '100%',
-                                    transform: 'scale(1.15)', /* l'immagine sara al 115% elimimando lo spazio tra le immagini*/
+                                    objectPosition: 'center 35%',
+                                    transform: 'scale(1)', /* l'immagine sara al 115% elimimando lo spazio tra le immagini*/
                                     transition: 'transform 0.5s, opacity 0.5s', /*si traforma in 0.5 secondi*/
                                     filter: 'brightness(40%)',  // Apply the darkening effect here using the brightness filter
                                     ":hover": {
                                         opacity: '1',
-                                        transform: 'scale(1.03)' /* Torna alla normalita sembrando più piccola */
+                                        transform: 'scale(1.10)' /* Torna alla normalita sembrando più piccola */
                                     }
                                 }}
-                                image={membershipPic1}
-                                alt="membership pic"
+                                src={Video}
                             />
                             <CardActions
                                 disableSpacing
@@ -68,7 +72,7 @@ export default function RingSide() {
                                         fontFamily: 'Playfair Display, serif',
                                         fontWeight: '200%',
                                         borderRadius: '20px',
-                                        fontSize: isScreenSmall ? '120%' : '150%',     
+                                        fontSize: isScreenSmall ? '120%' : '150%',
                                         padding: isScreenSmall ? '10px 20px' : '15px 30px',
                                         backgroundColor: alpha(dashboardTheme.palette.customColors.white, 0.7),
                                         transition: 'transform 0.5s, color 0.5s, background 0.5s',
@@ -78,7 +82,7 @@ export default function RingSide() {
                                         }
                                     }}
                                 >
-                                    FORTI E FIERI
+                                    SCOPRI
                                 </Button>
                             </CardActions>
                         </Card>

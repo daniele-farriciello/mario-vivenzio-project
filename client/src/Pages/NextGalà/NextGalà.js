@@ -71,6 +71,7 @@ export default function NextGalà() {
             src={Video1}
             autoPlay
             loop
+            playsInline
             style={{
               borderRadius: '20px',
               maxWidth: '100%',

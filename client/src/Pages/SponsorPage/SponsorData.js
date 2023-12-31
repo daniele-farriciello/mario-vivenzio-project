@@ -1,5 +1,4 @@
 import condominioForYou from '../../img/sponsor-img/condominioForYou.png'
-import quattroSpicchi from '../../img/sponsor-img/quattro-spicchi.jpg'
 import pastaFerrara from '../../img/sponsor-img/pastaFerrara.png'
 import wePower from '../../img/sponsor-img/wepower.png'
 import saraTiAssicuro from '../../img/sponsor-img/saraTiAssicura.jpg'
@@ -14,8 +13,8 @@ export const SponsorData =  [
     },
     {
         id: 1,
-        img: quattroSpicchi,
-        link: "https://www.instagram.com/quattrospicchipizzeria/"
+        img: sapImpianti,
+        link: "https://www.sapiimpianti.com/"
     },
     {
         id: 2,
@@ -36,10 +35,5 @@ export const SponsorData =  [
         id: 5,
         img: waBusiness,
         link: ""
-    },
-    {
-        id: 6,
-        img: sapImpianti,
-        link: "https://www.sapiimpianti.com/"
     }
 ]

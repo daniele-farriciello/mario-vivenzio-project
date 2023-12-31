@@ -31,7 +31,7 @@ export default function NavBar() {
     };
 
     const navigateToStoryVivenzioGym = () => {
-        navigate('/storyVivenzioGym')
+        document.getElementById('chiSiamoSection')?.scrollIntoView({ behavior: 'smooth' });
     };
 
     const scrollToSponsor = () => {

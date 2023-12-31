@@ -11,6 +11,7 @@ import ThirdPage from '../RingSide/RingSide';
 import SponsorPage from '../SponsorPage/SponsorPage';
 import Footer from '../Footer/Footer';
 import { useNavigate } from 'react-router-dom';
+import ChiSiamo from '../ChiSiamo/ChiSiamo';
 
 // import { RegoularH1HomePage } from '../../Components/Typography/Typography';
 
@@ -22,7 +23,7 @@ export default function HomePage() {
 
     function clickExploreButton() {
         console.log('clicked');
-        document.getElementById('activitiesSection')?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('chiSiamoSection')?.scrollIntoView({ behavior: 'smooth' });
     }
     function clickProssimoGalaButton() {
         console.log('clicked')
@@ -160,6 +161,7 @@ export default function HomePage() {
                     </Box>
                 </Box>
             </Paper>
+            <ChiSiamo/>
             <Activities/>
             <ThirdPage/>
             <SponsorPage/>
