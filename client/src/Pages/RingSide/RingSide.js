@@ -6,13 +6,13 @@ import { Box, Paper, Button, alpha, useMediaQuery, useTheme } from "@mui/materia
 import membershipPic1 from '../../img/ring-gruppo.png';
 import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme'
 import { RegoularH1} from '../../Components/Typography/Typography';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function RingSide() {
 
     const theme = useTheme();
     const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return (
         <section id="ringSideSection">
@@ -20,7 +20,7 @@ export default function RingSide() {
             <Box sx={{ borderBottom: '2px solid', borderColor: dashboardTheme.palette.customColors.red, width: '15%', margin: '20px auto' }}></Box>
             <Paper sx={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', width: '100vw' }}>
                 <Box sx={{ display: 'flex', alignItems: "center", flexDirection: "row", width: '100%' }} >
-                    <Box sx={{ height: '80vh', width: '100%' }}>  {/*  onClick={() => navigate('/fightsHistoryPage')} * */}
+                    <Box sx={{ height: '80vh', width: '100%' }} onClick={() => navigate('/fightsHistoryPage')}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             <div
                                 style={{
