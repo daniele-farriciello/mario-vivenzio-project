@@ -9,11 +9,11 @@ import { RegoularH2, RegoularH1 } from '../../../Components/Typography/Typograph
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Link } from 'react-router-dom';
-import { SponsorData } from '../../SponsorPage/SponsorData';
 import { TeamVivenzioTitle } from '../../../Components/Typography/Typography';
+import { FightersData } from './FightersData';
 
 export default function FightsHistoryPage() {
-  const [currentSponsorIndex, setCurrentSponsorIndex] = useState(0);
+  const [currentFighterIndex, setCurrentFighterIndex] = useState(0);
     const [fadeOut, setFadeOut] = useState(false);
     const theme = useTheme();
     const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
@@ -22,7 +22,7 @@ export default function FightsHistoryPage() {
   const handleNextSponsor = () => {
     setFadeOut(true);
     setTimeout(() => {
-      setCurrentSponsorIndex((prevIndex) => (prevIndex + 1) % SponsorData.length);
+      setCurrentFighterIndex((prevIndex) => (prevIndex + 1) % FightersData.length);
       setFadeOut(false);
     }, 500); // Duration of the fade out
   };
@@ -30,7 +30,7 @@ export default function FightsHistoryPage() {
   const handlePreviousSponsor = () => {
     setFadeOut(true);
     setTimeout(() => {
-      setCurrentSponsorIndex((prevIndex) => (prevIndex - 1 + SponsorData.length) % SponsorData.length);
+      setCurrentFighterIndex((prevIndex) => (prevIndex - 1 + FightersData.length) % FightersData.length);
       setFadeOut(false);
     }, 500); // Duration of the fade out
   };
@@ -80,7 +80,7 @@ export default function FightsHistoryPage() {
           flexDirection: 'column'
         }}
       >
-        <TeamVivenzioTitle paddingTop={10} fontSize={80} marginBottom={4} color={dashboardTheme.palette.primary.main}>HYSTORY TEAM VIVENZIO</TeamVivenzioTitle>
+        <TeamVivenzioTitle paddingTop={11} fontSize={80} marginBottom={3} color={dashboardTheme.palette.primary.main}>HYSTORY TEAM VIVENZIO</TeamVivenzioTitle>
         <Box
           sx={{
             width: '100%',
@@ -90,22 +90,21 @@ export default function FightsHistoryPage() {
             paddingBottom: '3%',
           }}
         >
-          {/* Sponsorship Box */}
+
           <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column' }}>
-            <RegoularH1 fontSize={isScreenSmall ? 35 : 45}>Partnership</RegoularH1>
             <Card elevation={10} sx={{
               width: '100%',
-              maxWidth: isScreenSmall ? '300px' : '500px',
-              height: isScreenSmall ? '220px' : '350px',
+              maxWidth: isScreenSmall ? '200px' : '320px',
+              height: isScreenSmall ? '300px' : '550px',
               position: 'relative',
               borderRadius: 10
             }}>
-              <Link to={SponsorData[currentSponsorIndex].link} target="_blank">
+              <Link to={FightersData[currentFighterIndex].link} target="_blank">
                 <img
-                  src={SponsorData[currentSponsorIndex].img}
+                  src={FightersData[currentFighterIndex].img}
                   alt="Sponsor"
                   style={{
-                    objectFit: 'contain',
+                    objectFit: 'cover',
                     width: '100%',
                     height: '100%',
                     opacity: fadeOut ? 0 : 1,
@@ -148,16 +147,28 @@ export default function FightsHistoryPage() {
           <Box sx={{
             display: 'flex',
             alignItems: 'center',
+            flexDirection: 'column',
             justifyContent: isScreenMedium ? 'center' : 'flex-start', // Center the content on medium screens
             paddingTop: isScreenMedium ? '0' : '20%',
             width: isScreenMedium ? '70%' : '100%',
             margin: isScreenMedium ? 'auto' : '0', // Center the box on medium screens
           }}
           >
-            <RegoularH2 fontSize={isScreenSmall ? 15 : 30}>
-              Il nostro obiettivo è promuovere l'eccellenza sportiva e offrire spettacoli emozionanti sul ring.
-              Unitevi a noi per vivere l'energia unica di questo evento straordinario e godervi combattimenti mozzafiato.
-            </RegoularH2>
+            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
+              {FightersData[currentFighterIndex].name}
+            </TeamVivenzioTitle>
+            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
+              Wins: {FightersData[currentFighterIndex].wins}
+            </TeamVivenzioTitle>
+            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
+              Knockouts: {FightersData[currentFighterIndex].knockouts}
+            </TeamVivenzioTitle>
+            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
+              Losses: {FightersData[currentFighterIndex].losses}
+            </TeamVivenzioTitle>
+            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
+              Draws: {FightersData[currentFighterIndex].draws}
+            </TeamVivenzioTitle>
           </Box>
         </Box>
       </Grid>

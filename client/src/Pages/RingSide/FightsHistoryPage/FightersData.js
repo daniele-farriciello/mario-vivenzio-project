@@ -1,39 +1,27 @@
-import condominioForYou from '../../img/sponsor-img/condominioForYou.png'
-import pastaFerrara from '../../img/sponsor-img/pastaFerrara.png'
-import wePower from '../../img/sponsor-img/wepower.png'
-import saraTiAssicuro from '../../img/sponsor-img/saraTiAssicura.jpg'
-import waBusiness from '../../img/sponsor-img/waBusiness.png'
-import sapImpianti from '../../img/sponsor-img/sapImpianti.jpg'
+import clemente from '../../../img/fightersStoryImg/cleme-wbc.jpeg'
+import pasquale from '../../../img/fightersStoryImg/maestro-pasquale.jpeg'
 
-export const SponsorData =  [
+export const FightersData =  [
     {
         id: 0,
-        img: condominioForYou,
-        link: "https://condominioforyou.it/"
+        img: clemente,
+        name: "Clemente Verdicchio",
+        fights: 13,
+        wins: 10,
+        knockouts: 3,
+        losses: 2,
+        draws: 1,
+        link: "https://www.instagram.com/verdicchio.clemente/"
     },
     {
         id: 1,
-        img: sapImpianti,
-        link: "https://www.sapiimpianti.com/"
-    },
-    {
-        id: 2,
-        img: pastaFerrara,
-        link: "https://www.pastaferrara.com/en/homepage/"
-    },
-    {
-        id: 3,
-        img: wePower,
-        link: ""
-    },
-    {
-        id: 4,
-        img: saraTiAssicuro,
-        link: "https://www.sara.it/"
-    },
-    {
-        id: 5,
-        img: waBusiness,
-        link: ""
+        img: pasquale,
+        name: "Pasquale Amoroso",
+        fights: 50,
+        wins: 33,
+        knockouts: 3,
+        losses: 5,
+        draws: 3,
+        link: "https://www.instagram.com/pasqualegamoroso/"
     }
 ]
