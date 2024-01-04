@@ -6,22 +6,17 @@ export const FightersData =  [
         id: 0,
         img: clemente,
         name: "Clemente Verdicchio",
-        fights: 13,
-        wins: 10,
-        knockouts: 3,
-        losses: 2,
-        draws: 1,
+        descriptions: {
+            1: 'Campione italiano professionisti Muay thai Wmo cat 70 kg anno 2022',
+            2: 'Campione italiano professionisti Muay thai WBC cat 69.800 anno 2023'
+        },
         link: "https://www.instagram.com/verdicchio.clemente/"
     },
     {
         id: 1,
         img: pasquale,
         name: "Pasquale Amoroso",
-        fights: 50,
-        wins: 33,
-        knockouts: 3,
-        losses: 5,
-        draws: 3,
+        description: '',
         link: "https://www.instagram.com/pasqualegamoroso/"
     }
 ]

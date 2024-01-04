@@ -158,17 +158,12 @@ export default function FightsHistoryPage() {
               {FightersData[currentFighterIndex].name}
             </TeamVivenzioTitle>
             <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
-              Wins: {FightersData[currentFighterIndex].wins}
+              STORIA
             </TeamVivenzioTitle>
             <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
               Knockouts: {FightersData[currentFighterIndex].knockouts}
             </TeamVivenzioTitle>
-            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
-              Losses: {FightersData[currentFighterIndex].losses}
-            </TeamVivenzioTitle>
-            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
-              Draws: {FightersData[currentFighterIndex].draws}
-            </TeamVivenzioTitle>
+            
           </Box>
         </Box>
       </Grid>
