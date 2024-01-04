@@ -1,6 +1,5 @@
 
-import Video2 from '../../../video/maestro-pao-cleme.mp4';
-import Image from '../../../img/mario-cleme-corner.jpg'
+import Video2 from '../../../video/video-cleme-sparring.mp4';
 import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import { Box, Grid, alpha, useMediaQuery, useTheme } from "@mui/material";
@@ -37,19 +36,22 @@ export default function FightsHistoryPage() {
   return (
     <Box sx={{ flexGrow: 1, height: '100vh', position: 'relative', overflowX: 'hidden' }}>
       {isScreenSmall ?
-        <img
-          alt='background-next-gala'
-          src={Image}
-          style={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            top: 0,
-            left: 0,
-            zIndex: -1
-          }}
-        />
+        <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          top: 0,
+          left: 0,
+          filter: 'blur(8px)',
+          zIndex: -1
+        }}
+        src={Video2}
+      />
         :
         <video
           autoPlay
@@ -60,6 +62,7 @@ export default function FightsHistoryPage() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            objectPosition: 'center 35%',
             top: 0,
             left: 0,
             filter: 'blur(8px)',
@@ -79,7 +82,7 @@ export default function FightsHistoryPage() {
           flexDirection: 'column'
         }}
       >
-        <TeamVivenzioTitle paddingTop={11} fontSize={80} marginBottom={3} color={dashboardTheme.palette.primary.main}>HYSTORY TEAM VIVENZIO</TeamVivenzioTitle>
+        <TeamVivenzioTitle paddingTop={isScreenSmall ? 0 : 11} fontSize={isScreenSmall ? 40 : 80} marginBottom={3} color={dashboardTheme.palette.primary.main}>HYSTORY TEAM VIVENZIO</TeamVivenzioTitle>
         <Box
           sx={{
             width: '100%',
@@ -147,17 +150,14 @@ export default function FightsHistoryPage() {
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'column',
-            justifyContent: isScreenMedium ? 'center' : 'flex-start', // Center the content on medium screens
+            justifyContent: isScreenMedium ? 'center' : 'center', // Center the content on medium screens
             paddingTop: isScreenMedium ? '0' : '5%',
             width: isScreenMedium ? '70%' : '100%',
             margin: isScreenMedium ? 'auto' : '0', // Center the box on medium screens
           }}
           >
-            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 50}>
+            <TeamVivenzioTitle color={dashboardTheme.palette.secondary.main} fontSize={isScreenSmall ? 15 : 50}>
               {FightersData[currentFighterIndex].name}
-            </TeamVivenzioTitle>
-            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 40}>
-              STORIA
             </TeamVivenzioTitle>
             {Object.entries(FightersData[currentFighterIndex].descriptions || {}).map(([key, description]) => (
               <TeamVivenzioTitle key={key} color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
