@@ -16,7 +16,12 @@ export const FightersData =  [
         id: 1,
         img: pasquale,
         name: "Pasquale Amoroso",
-        description: '',
+        descriptions: {
+            1: 'Campione mondiale professionisti Wmo cat 66,700 anno 2022',
+            2: 'Campione mondiale professionisti Wmo cat 66,700 anno 2022',
+            3: 'Campione mondiale professionisti Wmo cat 66,700 anno 2022',
+            4: 'Campione italiano professionisti Muay thai Kombat League cat 63.500 kg anno 2019'
+        },
         link: "https://www.instagram.com/pasqualegamoroso/"
     }
 ]

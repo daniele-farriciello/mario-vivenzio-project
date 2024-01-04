@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import { Box, Grid, alpha, useMediaQuery, useTheme } from "@mui/material";
 import dashboardTheme from '../../../Components/DashboardTheme/DashboardTheme'
-import { RegoularH2, RegoularH1 } from '../../../Components/Typography/Typography';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Link } from 'react-router-dom';
@@ -14,10 +13,10 @@ import { FightersData } from './FightersData';
 
 export default function FightsHistoryPage() {
   const [currentFighterIndex, setCurrentFighterIndex] = useState(0);
-    const [fadeOut, setFadeOut] = useState(false);
-    const theme = useTheme();
-    const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    const isScreenMedium = useMediaQuery(theme.breakpoints.down('md'));
+  const [fadeOut, setFadeOut] = useState(false);
+  const theme = useTheme();
+  const isScreenSmall = useMediaQuery(theme.breakpoints.down('sm'));
+  const isScreenMedium = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleNextSponsor = () => {
     setFadeOut(true);
@@ -149,21 +148,22 @@ export default function FightsHistoryPage() {
             alignItems: 'center',
             flexDirection: 'column',
             justifyContent: isScreenMedium ? 'center' : 'flex-start', // Center the content on medium screens
-            paddingTop: isScreenMedium ? '0' : '20%',
+            paddingTop: isScreenMedium ? '0' : '5%',
             width: isScreenMedium ? '70%' : '100%',
             margin: isScreenMedium ? 'auto' : '0', // Center the box on medium screens
           }}
           >
-            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
+            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 50}>
               {FightersData[currentFighterIndex].name}
             </TeamVivenzioTitle>
-            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
+            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 40}>
               STORIA
             </TeamVivenzioTitle>
-            <TeamVivenzioTitle color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
-              Knockouts: {FightersData[currentFighterIndex].knockouts}
-            </TeamVivenzioTitle>
-            
+            {Object.entries(FightersData[currentFighterIndex].descriptions || {}).map(([key, description]) => (
+              <TeamVivenzioTitle key={key} color={dashboardTheme.palette.primary.main} fontSize={isScreenSmall ? 15 : 30}>
+                {description}
+              </TeamVivenzioTitle>
+            ))}
           </Box>
         </Box>
       </Grid>
