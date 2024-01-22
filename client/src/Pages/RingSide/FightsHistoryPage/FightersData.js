@@ -23,5 +23,23 @@ export const FightersData =  [
             4: 'Campione italiano professionisti Muay thai Kombat League cat 63.500 kg anno 2019'
         },
         link: "https://www.instagram.com/pasqualegamoroso/"
+    },
+    {
+        id: 2,
+        //img: igor,
+        name: "Igor Kozak",
+        descriptions: {
+            1: 'Campione italiano professionisti K1 wtka cat 71 kg anno 2016'
+        },
+        link: ""
+    },
+    {
+        id: 3,
+        //img: raffaele,
+        name: "Raffaele Minichino",
+        descriptions: {
+            1: 'Campione italiano professionisti Muay thai Kombat League cat 67 kg anno 2018'
+        },
+        link: ""
     }
 ]
