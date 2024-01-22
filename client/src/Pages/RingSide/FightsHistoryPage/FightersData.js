@@ -1,7 +1,10 @@
 import clemente from '../../../img/fightersStoryImg/cleme-wbc.jpeg'
 import pasquale from '../../../img/fightersStoryImg/maestro-pasquale.jpeg'
+import maestro from '../../../img/fightersStoryImg/img-maestro.jpg'
+import raffaele from '../../../img/fightersStoryImg/raffaele-fighter.jpeg'
+import igor from '../../../img/fightersStoryImg/igor-fighter.jpeg'
 
-export const FightersData =  [
+export const FightersData = [
     {
         id: 0,
         img: clemente,
@@ -25,8 +28,22 @@ export const FightersData =  [
         link: "https://www.instagram.com/pasqualegamoroso/"
     },
     {
-        id: 2,
-        //img: igor,
+        id: 3,
+        img: maestro,
+        name: "Mario Vivenzio",
+        descriptions: {
+            1: 'Allenatore Muay thai anno 2010 F.I.K.B',
+            2: 'Istruttore Muay thai anno 2012 F.I.K.B',
+            3: 'X khan Muay boran Wmo anno 2020',
+            4: 'Esperienza decennale nei migliori camp thailandesi',
+            5: 'Seminari internazionali con top trainer di livello mondiale',
+            6: 'Professional cutman team catizone'
+        },
+        link: "https://www.instagram.com/mario__vivenzio/"
+    },
+    {
+        id: 4,
+        img: igor,
         name: "Igor Kozak",
         descriptions: {
             1: 'Campione italiano professionisti K1 wtka cat 71 kg anno 2016'
@@ -34,8 +51,8 @@ export const FightersData =  [
         link: ""
     },
     {
-        id: 3,
-        //img: raffaele,
+        id: 5,
+        img: raffaele,
         name: "Raffaele Minichino",
         descriptions: {
             1: 'Campione italiano professionisti Muay thai Kombat League cat 67 kg anno 2018'
