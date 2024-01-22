@@ -57,6 +57,7 @@ export default function FightsHistoryPage() {
           autoPlay
           loop
           muted
+          playsInline
           style={{
             position: 'absolute',
             width: '100%',
