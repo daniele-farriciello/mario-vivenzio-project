@@ -55,7 +55,7 @@ export const FightersData = [
         img: raffaele,
         name: "Raffaele Minichino",
         descriptions: {
-            1: 'Campione italiano professionisti Muay thai Kombat League cat 67 kg anno 2018'
+            1: 'Campione italiano professionisti Muay thai Kombat League cat 67 kg anno 2018' //desc
         },
         link: ""
     }
