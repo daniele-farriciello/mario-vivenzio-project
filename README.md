@@ -1,5 +1,5 @@
 # Muay Thai Gym Italy Website
-## Welcome to our Muay Thai Gym Italy website. This site is dedicated to showcasing the exciting world of Muay Thai and everything our gym has to offer.
+Welcome to our Muay Thai Gym Italy website. This site is dedicated to showcasing the exciting world of Muay Thai and everything our gym has to offer.
 
 # What's Inside
 ## About Muay Thai: 
