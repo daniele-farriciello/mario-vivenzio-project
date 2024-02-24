@@ -3,6 +3,9 @@ import pasquale from '../../../img/fightersStoryImg/maestro-pasquale.jpeg'
 import maestro from '../../../img/fightersStoryImg/img-maestro.jpg'
 import raffaele from '../../../img/fightersStoryImg/raffaele-fighter.jpeg'
 import igor from '../../../img/fightersStoryImg/igor-fighter.jpeg'
+import annamaria from '../../../img/fightersStoryImg/annamaria.jpg'
+import andrea from '../../../img/fightersStoryImg/andrea.png'
+import gennaro from '../../../img/fightersStoryImg/gennaro.jpg'
 
 export const FightersData = [
     {
@@ -10,8 +13,11 @@ export const FightersData = [
         img: clemente,
         name: "Clemente Verdicchio",
         descriptions: {
-            1: 'Campione italiano professionisti Muay thai Wmo cat 70 kg anno 2022',
-            2: 'Campione italiano professionisti Muay thai WBC cat 69.800 anno 2023'
+            1: 'Height: 184cm | Weight: 70kg',
+            2: 'Match: 18 vittorie | 4 losses',
+            3: 'European semi pro Muay thai Champion Wmo',
+            4: 'Italian professional Champion muay thai Wmo cat 69.800',
+            5: 'Italian professional Champion Muay thai WBC cat 69.800'
         },
         link: "https://www.instagram.com/verdicchio.clemente/"
     },
@@ -55,8 +61,39 @@ export const FightersData = [
         img: raffaele,
         name: "Raffaele Minichino",
         descriptions: {
-            1: 'Campione italiano professionisti Muay thai Kombat League cat 67 kg anno 2018' //desc
+            1: 'Campione italiano professionisti Muay thai Kombat League cat 67 kg anno 2018'
         },
         link: ""
+    },
+    {
+        id: 6,
+        img: annamaria,
+        name: "Annamaria Salvati",
+        descriptions: {
+            1: 'Height: 163cm | Weight: 48kg',
+            2: 'Match: 10 wins | 0 losses'
+        },
+        link: "https://www.instagram.com/annamariasalvatii/"
+    },
+    {
+        id: 7,
+        img: andrea,
+        name: "Andrea Franzese",
+        descriptions: {
+            1: 'Height: 182cm | Weight: 68kg',
+            2: 'Match: 10 wins | 3 losses'
+        },
+        link: "https://www.instagram.com/andreafranzese46/"
+    },
+    {
+        id: 8,
+        img: gennaro,
+        name: "Gennaro De Meo",
+        descriptions: {
+            1: 'Height: 180cm | Weight: 70kg',
+            2: 'Match: 10 wins | 3 losses',
+            3: 'Wmo pro am world Champion'
+        },
+        link: "https://www.instagram.com/gennyjericho/"
     }
 ]
