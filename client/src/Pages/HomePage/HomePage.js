@@ -40,7 +40,7 @@ export default function HomePage() {
                     flexDirection: "row",
                     width: '100%' 
                 }}>
-                    <Box sx={{ height: '100vh', width: '100vh' }}>
+                    <Box sx={{ height: '100vh', width: '100vw' }}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             <CardMedia
                                 component="img"
@@ -95,7 +95,7 @@ export default function HomePage() {
                             </CardActions>
                         </Card>
                     </Box>
-                    <Box sx={{ height: '100vh', width: '100vh' }}>
+                    <Box sx={{ height: '100vh', width: '100vw' }}>
                         <Card sx={{ width: '100%', height: '100%', position: 'relative' }}>
                             <div
                                 style={{
