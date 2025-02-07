@@ -1,9 +1,7 @@
 import condominioForYou from '../../img/sponsor-img/condominioForYou.png'
-import pastaFerrara from '../../img/sponsor-img/pastaFerrara.png'
-import wePower from '../../img/sponsor-img/wepower.png'
 import saraTiAssicuro from '../../img/sponsor-img/saraTiAssicura.jpg'
-import waBusiness from '../../img/sponsor-img/waBusiness.png'
 import sapImpianti from '../../img/sponsor-img/sapImpianti.jpg'
+import antonioAmmaturo from '../../img/sponsor-img/antonioammaturo.jpg'
 
 export const SponsorData =  [
     {
@@ -18,22 +16,7 @@ export const SponsorData =  [
     },
     {
         id: 2,
-        img: pastaFerrara,
-        link: "https://www.pastaferrara.com/en/homepage/"
-    },
-    {
-        id: 3,
-        img: wePower,
-        link: ""
-    },
-    {
-        id: 4,
-        img: saraTiAssicuro,
-        link: "https://www.sara.it/"
-    },
-    {
-        id: 5,
-        img: waBusiness,
-        link: ""
+        img: antonioAmmaturo,
+        link: "https://www.istituto-santantonio.it/"
     }
 ]
