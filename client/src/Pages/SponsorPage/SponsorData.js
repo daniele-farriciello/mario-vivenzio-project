@@ -1,5 +1,4 @@
 import condominioForYou from '../../img/sponsor-img/condominioForYou.png'
-import saraTiAssicuro from '../../img/sponsor-img/saraTiAssicura.jpg'
 import sapImpianti from '../../img/sponsor-img/sapImpianti.jpg'
 import antonioAmmaturo from '../../img/sponsor-img/antonioammaturo.jpg'
 

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import Video1 from '../../video/workingProgressGala.mp4';
 import Video2 from '../../video/maestro-pao-cleme.mp4';
 import { useMediaQuery, useTheme } from '@mui/material';
 import Image from '../../img/mario-cleme-corner.jpg'
-import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
-import { TeamVivenzioTitle } from '../../Components/Typography/Typography';
+import Image2 from '../../img/next-gala-img.jpg'
+// import dashboardTheme from '../../Components/DashboardTheme/DashboardTheme';
+// import { TeamVivenzioTitle } from '../../Components/Typography/Typography';
 
 export default function NextGalà() {
   const theme = useTheme();
@@ -66,19 +66,23 @@ export default function NextGalà() {
             justifyContent: 'center',
           }}
         >
-          <TeamVivenzioTitle marginTop={isScreenSmall ? 8 : 5} marginBottom={!isScreenSmall && 5} fontSize={80} color={dashboardTheme.palette.primary.main}>WORKING IN PROGRESS</TeamVivenzioTitle>
-          <video
-            src={Video1}
-            autoPlay
-            loop
-            playsInline
-            style={{
-              borderRadius: '20px',
-              maxWidth: '100%',
-              maxHeight: '60vh',
-              objectFit: 'contain'
-            }}
-          />
+          {/* {!isScreenSmall ?
+            <TeamVivenzioTitle marginTop={5} marginBottom={5} fontSize={80} color={dashboardTheme.palette.primary.main}>WORKING IN PROGRESS</TeamVivenzioTitle>
+          :
+            null
+          } */}
+          <img src={Image2} alt='background-next-gala' style={{
+            position: 'absolute',
+            width: isScreenSmall ? '100%' : 'auto',
+            height: isScreenSmall ? 'auto' : '90%',
+            objectFit: 'cover',
+            bottom: isScreenSmall ? 0 : 5,
+            left: '50%',
+            borderRadius: '20px',
+            transform: isScreenSmall ? 'translate(-50%, -50%)' : 'translateX(-50%)',
+            top: isScreenSmall ? '50%' : 'auto',
+            zIndex: -1
+          }} />
         </Grid>
       </Grid>
     </Box>
